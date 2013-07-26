@@ -1,0 +1,32 @@
+---
+! '@2x/apple-store.png': ! '@2x/apple-store-1e1cc6dabf8db86ca82097cbace4e4e1.png'
+! '@2x/cookies2@2x.png': ! '@2x/cookies2@2x-4a4143059d30560d7f63a94b8c45f151.png'
+! '@2x/cookies@2x.png': ! '@2x/cookies@2x-7572f22e7199c6f838197f2999f1a632.png'
+! '@2x/desktop@2x.png': ! '@2x/desktop@2x-2d7cb877fdb149fa1a1d93a0bd804c76.png'
+! '@2x/firefox-marketplace.png': ! '@2x/firefox-marketplace-3f00cdcdefcbc713064bd8526a92cb3e.png'
+! '@2x/green-office@2x.png': ! '@2x/green-office@2x-32c2d0fb6d8ef082a0303805c4a16dfc.png'
+! '@2x/home@2x.png': ! '@2x/home@2x-df10765c928ca17874c1217a674f5967.png'
+! '@2x/laptop-blue.png': ! '@2x/laptop-blue-5178b9abcad0f4b876f8536ccaf07c5f.png'
+! '@2x/laptop.png': ! '@2x/laptop-cbcf2e22f90ed44fbc3f15a99a7998ef.png'
+! '@2x/responsive-vectors@2.png': ! '@2x/responsive-vectors@2-13842ef75017a854477801c141a083a7.png'
+! '@2x/two-phones@2x.png': ! '@2x/two-phones@2x-3dc8642f1f66f12561cebe358e2a8fe8.png'
+browser-logos.png: browser-logos-2978698b31d2be4a3fd3566889e388a4.png
+browser-logos@2x.png: browser-logos@2x-70c66015b5df6556466fd4cac11ed048.png
+cookies.png: cookies-5b66ec0019bb455d042d8980be35a82c.png
+cookies2.png: cookies2-af70ee3b42ded86c000c3b63f9a072d3.png
+desktop.png: desktop-d744d212b0d41ffddfbd5be5f93b7790.png
+green-office.png: green-office-d0fc88220f7aa54cd1823fc20d255c1a.png
+home.png: home-dbf1bb825a537656a040c606d8f98451.png
+laptop-blue@2x.png: laptop-blue@2x-51d79bfee09482549516d65c4f7d91dc.png
+laptop@2x.png: laptop@2x-50ac5a7536f0d66421c8500a80d8d773.png
+map.png: map-05c40581bdfc93858cff9d462eb782d3.png
+pixel.png: pixel-f4e535d04423260cfca5675e43207957.png
+rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
+responsive-vectors.png: responsive-vectors-d7bb9e29b28b4e5a49c30c18f564161c.png
+spiderman.jpg: spiderman-8b8133665bd48cbee302b5a600b41850.jpg
+superman.jpg: superman-04e05a4af0b62d2a05fa4b3db1c5f72e.jpg
+two-phones.png: two-phones-a4e558c3e98a9985f02743237f9cd1bc.png
+video.png: video-02efca8223fa77567ce5ba44405eee74.png
+video@2x.png: video@2x-4f4b1d93454b35d992a954b38a7df487.png
+application.js: application-0bc263023db5110fb468c854f4e0bd8d.js
+application.css: application-2a956e17d56e9bbad2764259c0779bda.css
