@@ -64,7 +64,7 @@
               <ul class="nav">
                 <li class="active"><a title="Home page" class="scroll brand-1" href="#home">Home</a></li>
                 <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">The Problem</a></li>
-                <li><a title="Themes assets" href="#assets" class="scroll brand-3">The Solution</a></li>
+                <li><a title="Themes assets" href="#solution" class="scroll brand-3">The Solution</a></li>
                 <li><a title="Who we are" href="#about" class="scroll fadeto brand-4">Features</a></li>
                 <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Our Team</a></li>
                 <li><a title="External page sample" href="sample-page.html" class=" brand-4">Subscribe</a></li>
@@ -157,7 +157,7 @@
                          
         <div class="row-fluid inner-page">
           <div class="span6 lazy-container">
-            <img class="figurette lazy" src="assets/img/pixel.png" data-original="assets/img/two-phones.png" alt="Zombie ipsum" />
+             <%= image_tag('logo.jpg', :class => 'figurette lazy')%>
           </div>
           <div class="span6">           
             <h3>It's time for a change.</h3>
@@ -169,6 +169,27 @@
             </ul>         
           </div>
         </div>
+
+
+
+         <div id="solution" class="page color-3">
+          <div class="inner-page">
+            <h2 class="page-headline">Introducing MFAsT</h2>
+            <h4 class="page-headline"> Motion and Function Assestment Tool</h4>
+          </div>
+
+        <!-- Vectors -->
+        <div class="row-fluid inner-page">
+          <div class="span6 lazy-container">
+            
+            <%= image_tag('responsive-vectors.png', :class => 'figurette lazy')%>
+          </div>
+          <div class="span6">
+            <h3>Redefining the meaning of efficiency.</h3>
+            <p class="lead">The 5Plus proprietary software has been <%= link_to('clinically validated for accuracy', 'http://www.google.com') %> and works in conjunciton with Microsoft KINECT to accurately and efficiently collect *range of motion data and calculate a person's usuable workspace*. </p>
+            <p> The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro.. </p>
+          </div>
+        </div> <!-- /vectors -->
 
         <hr>
 
