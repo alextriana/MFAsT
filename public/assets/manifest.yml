@@ -19,6 +19,7 @@ green-office.png: green-office-d0fc88220f7aa54cd1823fc20d255c1a.png
 home.png: home-dbf1bb825a537656a040c606d8f98451.png
 laptop-blue@2x.png: laptop-blue@2x-51d79bfee09482549516d65c4f7d91dc.png
 laptop@2x.png: laptop@2x-50ac5a7536f0d66421c8500a80d8d773.png
+logo.jpg: logo-b37bdbb474e1bfe5e54c73d2efc16af5.jpg
 map.png: map-05c40581bdfc93858cff9d462eb782d3.png
 pixel.png: pixel-f4e535d04423260cfca5675e43207957.png
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
@@ -28,5 +29,5 @@ superman.jpg: superman-04e05a4af0b62d2a05fa4b3db1c5f72e.jpg
 two-phones.png: two-phones-a4e558c3e98a9985f02743237f9cd1bc.png
 video.png: video-02efca8223fa77567ce5ba44405eee74.png
 video@2x.png: video@2x-4f4b1d93454b35d992a954b38a7df487.png
-application.js: application-0bc263023db5110fb468c854f4e0bd8d.js
+application.js: application-b0209ec7fc3f2c9db1bf9466314706e1.js
 application.css: application-2a956e17d56e9bbad2764259c0779bda.css
