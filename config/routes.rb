@@ -1,7 +1,14 @@
 Mfast::Application.routes.draw do
-  get "staticpages/index"
+  get "feedback/new"
+
+  get "feedback/create"
+
+  get "staticpages/index" 
+
+  post 'staticpages/index' => 'feedback#create'
 
   root :to => 'staticpages#index'
+  resources :feedback
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
