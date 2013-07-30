@@ -1,4 +1,9 @@
 ---
+FontAwesome.otf: FontAwesome-bbdb41bed0b05c51639b3a9ea74cb741.otf
+fontawesome-webfont.eot: fontawesome-webfont-f67888d5955644864d05427053b88918.eot
+fontawesome-webfont.svg: fontawesome-webfont-12f7125cf5e74cba26c95696badeb410.svg
+fontawesome-webfont.ttf: fontawesome-webfont-2a4fc310ee5f425d5b6b07d5d7106940.ttf
+fontawesome-webfont.woff: fontawesome-webfont-c3539c6f9334bf6e70944599794b1976.woff
 ! '@2x/apple-store.png': ! '@2x/apple-store-1e1cc6dabf8db86ca82097cbace4e4e1.png'
 ! '@2x/cookies2@2x.png': ! '@2x/cookies2@2x-4a4143059d30560d7f63a94b8c45f151.png'
 ! '@2x/cookies@2x.png': ! '@2x/cookies@2x-7572f22e7199c6f838197f2999f1a632.png'
@@ -34,5 +39,5 @@ two-phones.png: two-phones-a4e558c3e98a9985f02743237f9cd1bc.png
 video.png: video-02efca8223fa77567ce5ba44405eee74.png
 video@2x.png: video@2x-4f4b1d93454b35d992a954b38a7df487.png
 application.js: application-becad4bad546518f16a0d91eb6119d42.js
-application.css: application-4ae48188b69c54602c7f8ec7adbbbe01.css
+application.css: application-f96ccc6803b37a989528f812c1b982c6.css
 jquery.min.map: jquery.min-70bec01470bf6bcfed5892ae554b38c8.map
