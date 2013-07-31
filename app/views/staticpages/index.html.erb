@@ -296,18 +296,28 @@
             
           </div>
           <div class="span2">
-            <button type="submit"  class="btn pull-right subscribe">Subscribe</button>
+            <button type="submit"  id="submit-subscribe" class="btn pull-right subscribe">Subscribe</button>
             
           </div>
+          <%end%>
         </div>
       </div>
-      <%end%>
+      
+        
 
         
         <div id='inputform'>
         <%= form_for(:feedback, :remote => true) do |f| %>
         <div id="contact" class="page color-3">
+
+
           <div class="inner-page">
+            <div class="inner-page row-fluid" id="subscribe-confirmed" style="display:none">
+              <div class="alert alert-success">
+                      <button type="button" class="close" data-dismiss="alert">×</button>
+                      <strong>Thanks for subscribing!</strong> We'll keep you up to date on our latest and greatest.
+                    </div>
+              </div>
             <h2 class="page-headline">Get in touch and stay updated</h2>
           </div>
           <div class="row-fluid inner-page contact">
@@ -359,6 +369,12 @@
       $('#inputform').hide();
       $('#input-confirmed').show();
     });
+
+  $('#submit-subscribe').click(function() {
+    $('#subscribe-confirmed').show();
+    });
+
+
   console.log('hehe');
   $(document).ready(function() {
      console.log('testtter'); 
