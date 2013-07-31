@@ -10,7 +10,7 @@
     
     <link href="http://vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
     <script src="http://vjs.zencdn.net/4.1/video.js"></script>
-
+  
     
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
     <!-- Le styles -->
@@ -24,7 +24,7 @@
     <!-- Le fav  -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
     if (typeof jQuery == 'undefined') {
       document.write(unescape("%3Cscript src='assets/js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
@@ -39,7 +39,7 @@
 
     <script>
         // History, and back button
-
+    console.log('dddd');
     $(function() {
     jQuery.history.listen()
       $('#nav .nav .scroll').click(function() {
@@ -63,12 +63,13 @@
           <h1 class="logo">5plus </h1>
             <div id="nav">
               <ul class="nav">
-                <li class="active"><a title="Home page" class="scroll brand-1" href="#home">Home</a></li>
+                <li class="active"><a title="Home page" class="scroll brand-1" id="hbut" href="#home">Home</a></li>
                 <li><a title="Check out our awesome services" href="#problem" class=" scroll brand-4">The Problem</a></li>
                 <li><a title="Themes assets" href="#solution" class="scroll brand-3">The Solution</a></li>
                 <li><a title="Get in touch!" href="#about" class="scroll brand-2">Our Team</a></li>
 
                 <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li>
+                <li><a title="Get in touch!" id="beta" class="scroll brand-2">BETA</a></li>
 
               </ul>
             </div>
@@ -289,37 +290,21 @@
           <div class="span4">
             <h4><strong>Be cool</strong>, subscribe to get our latest news</h4>
           </div>
+          <%= form_for(:feedback, :remote => true) do |f| %>
           <div class="span6">
-            <input type="email" placeholder="your@e-mail.com" name="EMAIL" class="subscribe">
+             <%= f.text_field :email, placeholder:"name@example.com", :class => "subscribe" %>
+            
           </div>
           <div class="span2">
             <button type="submit"  class="btn pull-right subscribe">Subscribe</button>
+            
           </div>
         </div>
       </div>
+      <%end%>
 
-
-        <div id="contact" class="page color-3">
-        <div class="inner-page">
-          <h2 class="page-headline">Get in touch and stay updated</h2>
-        </div>
-        <div class="row-fluid inner-page contact">
-          <div class="span6">
-            <h3>What's on your mind?</h3>
-            <textarea rows="6" placeholder="Your story"></textarea>
-            <input type="text" placeholder="your@e-mail.com"><br />
-            <input type="text" placeholder="Name"><br />
-            <button class="btn btn-centered">Contact us</button>
-          </div>
-          <div class="span6">
-            <div class="btn-container centered lazy-container text-center">
-              <%= image_tag('transparent.gif', :class => 'figurette lazy')%>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-
+        
+        <div id='inputform'>
         <%= form_for(:feedback, :remote => true) do |f| %>
         <div id="contact" class="page color-3">
           <div class="inner-page">
@@ -328,16 +313,30 @@
           <div class="row-fluid inner-page contact">
             <div class="span6">
               <h3>What's on your mind?</h3>
-              <%= f.text_area :input, placeholder:"Name", rows:6   %>
+              <%= f.text_area :input, placeholder:"Feedback", rows:6, id:"comment"   %>
               <%= f.text_field :email, placeholder:"name@example.com" %>
               <%= f.text_field :name, placeholder:"Name" %>
-              <%= submit_tag "Contact Us", :class => "btn btn-centered" %>
+             
+              <button type="submit" id="submit-input" class="btn btn-centered">Contact Us</button>
             </div>
 
+            <div class="span6">
+              <div class="btn-container centered lazy-container text-center">
+                <%=image_tag('transparent.gif')%>
+              </div>
+            </div>
+        </div>
 
         </div>
-        </div>
         <% end %>
+      </div>
+
+      <div class="inner-page row-fluid" id="input-confirmed" style="display:none">
+      <div class="alert alert-success">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <strong>Thanks, got it!</strong> We appreciate your input.
+            </div>
+      </div>
 
        <footer class="page color-5">
         <div class="inner-page row-fluid">
@@ -350,4 +349,21 @@
           </div>
         </div>
       </footer>
+    </div>
+  </div>
+</div>
 
+<script>
+  $('#submit-input').click(function() {
+      console.log('hit');
+      $('#inputform').hide();
+      $('#input-confirmed').show();
+    });
+  console.log('hehe');
+  $(document).ready(function() {
+     console.log('testtter'); 
+    
+
+
+  });
+</script>
