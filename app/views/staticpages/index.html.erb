@@ -7,7 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Twitter bootstrap theme">
     <meta name="author" content="prettystrap">
-    
+    <style>
+        .popup_box { 
+      display:none; /* Hide the DIV */
+      position:fixed;  
+      _position:absolute; /* hack for internet explorer 6 */  
+      height:400px;  
+      width:500px;  
+      background:#7f8c8d;  
+      left: 400px;
+      top: 150px;
+      z-index:50; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+      margin-left: 15px;  
+      
+      /* additional features, can be omitted */
+      border:2px solid #cccccc;   
+      padding:15px;  
+      font-size:15px;  
+      -moz-box-shadow: 0 0 5px #cccccc;
+      -webkit-box-shadow: 0 0 5px #cccccc;
+      box-shadow: 0 0 5px #cccccc;
+      
+    }
+    </style>
     <link href="http://vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
     <script src="http://vjs.zencdn.net/4.1/video.js"></script>
   
@@ -49,6 +71,24 @@
     </script>
   </head>
 
+
+  <div id="outter">
+    <div class="popup_box" id="popup_box">
+      <div class="contianer" id="popup_box_container">
+        <div id="loading" style="display:none">
+          <div class="progress progress-striped active span6" id="bar-base">
+            <div class="bar" id="bar-fill" style="width: 0%">
+            
+            </div>
+          </div>
+          </br>
+          <h1 id = "text" style="position:center"></h1>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="content">
   <!-- activate scrollspy -->
   <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -60,16 +100,16 @@
       <!-- Navigation -->
       <header class="navbar navbar-fixed-top">
         <div class="inner-page">
-          <h1 class="logo">5plus </h1>
-            <div id="nav">
+          <h1 class="logo"><%=link_to(image_tag('5plus-logo-long-transparent.png'), "#home")%> </h1>
+            <div id="nav" >
               <ul class="nav">
-                <li class="active"><a title="Home page" class="scroll brand-1" id="hbut" href="#home">Home</a></li>
-                <li><a title="Check out our awesome services" href="#problem" class=" scroll brand-4">The Problem</a></li>
-                <li><a title="Themes assets" href="#solution" class="scroll brand-3">The Solution</a></li>
-                <li><a title="Get in touch!" href="#about" class="scroll brand-2">Our Team</a></li>
+                <li class="active"  ><a title="Home page" class="scroll brand-1" id="hbut" href="#home" style="height:50px">Home</a></li>
+                <li><a title="Check out our awesome services" href="#problem" style="height:50px">The Problem</a></li>
+                <li><a title="The Solution" href="#solution" class="scroll brand-3" style="height:50px">The Solution</a></li>
+                <li><a title="Meet Us" href="#about" class="scroll brand-2" style="height:50px">Our Team</a></li>
 
-                <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li>
-                <li><a title="Get in touch!" id="beta" class="scroll brand-2">BETA</a></li>
+                <li><a title="Get in touch!" href="#contact" class="scroll brand-2" style="height:50px">Contact</a></li>
+                <li><a title="Get in touch!" id="beta" class="scroll brand-2" style="height:50px">BETA</a></li>
 
               </ul>
             </div>
@@ -110,10 +150,11 @@
           </div>
           <div class="span4 pull-right">
             <ul class="big-list">
-              <li><i class="icon-bolt"></i>Fast</li>
-              <li><i class="icon-tablet"></i>Cross Platform</li>
-              <li><i class="icon-cloud"></i>Cloud Based</li>
-              <li><i class="icon-user-md"></i>Clinically Certified</li>
+              <li><i class="icon-bolt"></i>10x Faster</li>
+              <li><i class="icon-tablet"></i>See More Patients</li><br>
+              <li><i class="icon-cloud"></i>More Treatment Time</li><br>
+              <li><i class="icon-user-md"></i>Easy to learn & affordable</li><br>
+              <li><i class="icon-user-md"></i>Clinically Validated</li>
             </ul>
             <br />
             <a href="#features" title="Check out more freatures!" class="scroll btn btn-centered"><i class="icon-caret-down"></i> Learn more</a>
@@ -124,8 +165,7 @@
         <div class="sign-up color-2 visible-desktop">
         <div class="row-fluid inner-page">
           <div class="span12">
-            <h4 class="pull-left">Data collection made practical and user friendly. This changes everything.</h4>
-            <a href="#features" class="scroll btn pull-right" title="Check out more freatures!"><i class="icon-caret-down"></i> Scroll down</a>
+            <h4 style="text-align:center">We develop Kinect-enabled digital health tools to provide more physical therapy at a lower cost.</h4>
           </div>
         </div>
       </div>
@@ -143,16 +183,16 @@
                <p>2013:<br>Outpatients: 5.4 million <br>Physical Therapists: 158,000</p>
             </li>
             <li>
-              <h3><i class="icon-time"></i> Current data collection is slow and tedious.</h3>
+              <h3><i class="icon-time"></i> Current process uses outdated tools.</h3>
               <p>The goniometer is an outdated medical tool. It inhibits the speed of data collection, as 
                 each joint's range of motion must be manually measured.
               </p>
               <p>It can take 30 minutes to collect *full body range of motion data*.
             </li>
             <li>
-              <h3><i class="icon-pencil"></i> Collected data becomes difficult to distribute.</h3>
-              <p> Collected data is transcribed manually, and must be retranscribed each time it is distributed.</p>
-              <p>Medical records and insurance forms quickly make for an inefficient and labor intensive process.</p>
+              <h3><i class="icon-pencil"></i> Coding, Billing, and Reporting.</h3>
+              <p>In 2013, CMS mandated quantified measurement and functional status reports for payment. </p>
+              <p>Medical records and insurance forms quickly make for an inefficient and labor intensive distribution.</p>
             </li>
             </ul>
         </div>
@@ -187,9 +227,9 @@
             <%= image_tag('responsive-vectors.png', :class => 'figurette lazy')%>
           </div>
           <div class="span6">
-            <h3>Redefining the meaning of efficiency.</h3>
-            <p class="lead">The 5plus proprietary software has been <%= link_to('clinically validated for accuracy', 'http://www.google.com') %> and works in conjunciton with Microsoft KINECT to accurately and efficiently collect *range of motion data and calculate a person's usuable workspace*. </p>
-            <p> The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro.. </p>
+            <h3>MFAsT addresses the critical shortage of therapists by improving their efficiency and decreasing the paperwork. </h3>
+            <p class="lead">The MFAsT software has been clinically validated as a more accurate tool for shoulder evaluation and can correlate the measurements to functions that are necessary in daily life activities such as feeding, grooming, dressing, and toilette hygiene. </p>
+            <p>Cutting edge diagnostic software delivers an intuitive 3D graph of patients’ function and improvement, making assessments more engaging and therapy more compelling.</p>
           </div>
         </div> <!-- /vectors -->
 
@@ -244,38 +284,35 @@
 
         <hr>
         <div class="row-fluid inner-page team">
-          <div class="span4">
+          <div class="span5 offset2" >
             <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="assets/kourosh.png">
-            <h2>Kourosh Parsapour</h2>
-            <p>M.D. St Georges University 1998<br>M.B.A. UC Irvine 2012<p>
-            <p>Founder<br>
-            <%= link_to("See More", 'http://www.linkedin.com/pub/kourosh-parsapour-md-mba/11/70/679')%></p>
-          </div><!-- /.span4 -->
-
-          <div class="span4">
-            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="/assets/steve.jpeg">
-            <h2>Bill Spath</h2>
-            <p>M.B.A. UC Irvine 2012</p>
-            <p>Founder • CFO <br>
-            <%= link_to("See More", 'http://www.linkedin.com/pub/bill-spath/6/206/74a')%><p>
-          </div><!-- /.span4 -->
-        
-
-   
-          <div class="span4">
-            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="/assets/steve.jpeg">
-            <h2>Jay Han</h2>
-            <p>M.B.A. UC Irvine 2012<p>
-            <p>Founder • CFO <br>
-            <%= link_to("See More", 'http://www.linkedin.com/pub/jay-j-han-md/5b/682/62a')%></p>
+            <h2>Kourosh Parsapour MD MBA</h2>
+            <h4>Founder<br></h4>
+            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/kourosh-parsapour-md-mba/11/70/679')%></p>
           </div><!-- /.span4 -->
 
           <div class="span5">
             <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="/assets/steve.jpeg">
-            <h2>Gregorij Kurillo</h2>
-            <p>M.B.A. UC Irvine 2012<p>
-            <p>Founder • CFO <br>
-            <%= link_to("See More", 'http://www.linkedin.com/profile/view?id=23960600&locale=en_US&trk=tyah2')%></p>
+            <h2>Bill Spath MBA</h2>
+            <h4>Founder • CFO <br></h4>
+            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/bill-spath/6/206/74a')%><p>
+          </div><!-- /.span4 -->
+        </div>
+        <div class="row-fluid inner-page team">
+
+   
+          <div class="span5 offset2">
+            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="/assets/steve.jpeg">
+            <h2>Jay Han MD</h2>
+            <h4>Founder<br></h4>
+            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/jay-j-han-md/5b/682/62a')%></p>
+          </div><!-- /.span4 -->
+
+          <div class="span5">
+            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="/assets/gregorij.jpg">
+            <h2>Gregorij Kurillo PHD</h2>
+            <h4>Founder<br></h4>
+            <%= link_to("LinkedIn", 'http://www.linkedin.com/profile/view?id=23960600&locale=en_US&trk=tyah2')%></p>
           </div><!-- /.span4 -->
         </div>
         
@@ -362,6 +399,7 @@
     </div>
   </div>
 </div>
+</div>
 
 <script>
   $('#submit-input').click(function() {
@@ -374,6 +412,39 @@
     $('#subscribe-confirmed').show();
     });
 
+  function unloadPopupBox() { // TO Unload the Popupbox
+      $('#popup_box').fadeOut("slow");
+      $("#content").css({ // this is just for style   
+        "opacity": "1"  
+      }); 
+    }
+
+    
+    function loadPopupBox() { // To Load the Popupbox
+  
+      $('#popup_box').fadeIn("slow");
+      $("#content").css({ // this is just for style
+        "opacity": "0.3"  });
+      
+     
+  }
+
+    $("#beta").click(function () {
+
+      loadPopupBox();
+      $('#popup_box_container').append('<h2 style="color:black" id=note>Want to be a beta tester? Sign up here:</h2>');
+      $('#popup_box_container').append('<div style="margin-left:25px" id="centered">');
+      $('#centered').append('<a class="btn btn-large btn-success" href="/auth/facebook" id="facebook-go">I understand</a>');
+    $('#centered').append('<a class="btn btn-large btn-danger" id="facebook-no" style="margin-left:25px">No! Take me back!</a>');    
+
+    $('#beta-no').click(function(){
+      unloadPopupBox();
+      $('#note').remove();
+      $('#centered').remove();
+      $('#facebook-no').remove();
+      $('#facebook-go').remove();
+    });
+      });
 
   console.log('hehe');
   $(document).ready(function() {

@@ -5699,6 +5699,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li {
   float: left;
+  height:50px;
 }
 .navbar .nav > li > a {
   float: none;
