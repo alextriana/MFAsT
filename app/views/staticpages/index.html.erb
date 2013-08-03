@@ -74,18 +74,28 @@
 
   <div id="outter">
     <div class="popup_box" id="popup_box">
-      <div class="contianer" id="popup_box_container">
-        <div id="loading" style="display:none">
-          <div class="progress progress-striped active span6" id="bar-base">
-            <div class="bar" id="bar-fill" style="width: 0%">
-            
-            </div>
+     
+      <div style="float:left; width:420px; margin-left:30px">
+          <h1 id = "text" style="color:black" ><strong>Want to be a beta tester?</strong></h1>
+         </div> 
+      <div style = "float:right; width:50px;">
+        <a class="btn btn-medium btn-danger icon-remove"  id="popup-close"></a>
+      </div>
+      <%= form_for(@feedback, :remote => true) do |f| %>
+          <div class="span6">
+             <%= f.text_field :name, placeholder:"Your Name", :class => "subscribe" %>
+              <%= f.text_field :email, placeholder:"Your Email", :class => "subscribe" %>
+              <%= f.text_field :institution, placeholder:"Your Institution", :class => "subscribe" %>
+              <%@feedback.beta=true%>
           </div>
-          </br>
-          <h1 id = "text" style="position:center"></h1>
+          <div class="span2">
+            <button type="submit"  id="submit-subscribe" class="btn pull-right subscribe">Get the Beta!</button>
+            
+          </div>
+          <%end%>
         </div>
       </div>
-    </div>
+ 
 
 
     <div id="content">
@@ -123,10 +133,10 @@
           <h2 class="page-headline large">Making physical therapy more efficient.</h2>
         </div>  
         <div class="row-fluid inner-page">
-          <div class="span8 pull-right lazy-container">
+          <div class="span7 pull-right lazy-container">
            <!-- video player here -->
 
-           <div class="span8 demo-video">
+           <div class="span7 demo-video">
           <!--[if !IE]> -->
             <video id="example_video_1" class="video-js vjs-default-skin"
                 controls preload="auto" width="640" height="264"
@@ -148,11 +158,11 @@
         </div>
 
           </div>
-          <div class="span4 pull-right">
+          <div class="span5 pull-right">
             <ul class="big-list">
-              <li><i class="icon-bolt"></i>10x Faster</li>
-              <li><i class="icon-tablet"></i>See More Patients</li><br>
-              <li><i class="icon-cloud"></i>More Treatment Time</li><br>
+              <li><i class="icon-bolt"></i>10x faster</li>
+              <li><i class="icon-tablet"></i>See more patients</li>
+              <li><i class="icon-cloud"></i>More treatment time</li>
               <li><i class="icon-user-md"></i>Easy to learn & affordable</li><br>
               <li><i class="icon-user-md"></i>Clinically Validated</li>
             </ul>
@@ -432,7 +442,7 @@
     $("#beta").click(function () {
 
       loadPopupBox();
-      $('#popup_box_container').append('<h2 style="color:black" id=note>Want to be a beta tester? Sign up here:</h2>');
+      $('#popup_box_container');
       $('#popup_box_container').append('<div style="margin-left:25px" id="centered">');
       $('#centered').append('<a class="btn btn-large btn-success" href="/auth/facebook" id="facebook-go">I understand</a>');
     $('#centered').append('<a class="btn btn-large btn-danger" id="facebook-no" style="margin-left:25px">No! Take me back!</a>');    

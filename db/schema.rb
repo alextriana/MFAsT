@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731074205) do
+ActiveRecord::Schema.define(:version => 20130802171517) do
 
   create_table "beta_testers", :force => true do |t|
     t.string   "name"
@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(:version => 20130731074205) do
     t.string   "name"
     t.string   "email"
     t.text     "input"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.boolean  "beta"
+    t.string   "institution"
   end
 
   create_table "subscribers", :force => true do |t|
