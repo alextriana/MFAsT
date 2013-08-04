@@ -28,6 +28,7 @@ end
 
 gem 'jquery-rails'
 
+
 gem 'therubyracer'
 
 gem 'newrelic_rpm'
