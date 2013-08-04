@@ -11,24 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130802171517) do
+ActiveRecord::Schema.define(:version => 20130804002036) do
 
-  create_table "beta_testers", :force => true do |t|
+  create_table "beta_users", :force => true do |t|
     t.string   "name"
+    t.string   "institution"
     t.string   "email"
-    t.string   "location"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "feedbacks", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.text     "input"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.boolean  "beta"
-    t.string   "institution"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "subscribers", :force => true do |t|

@@ -30,9 +30,7 @@ gem 'jquery-rails'
 
 gem 'therubyracer'
 
-gem 'activesupport'
-gem 'multi_json'
-gem 'rake'
+gem 'newrelic_rpm'
 
 
 

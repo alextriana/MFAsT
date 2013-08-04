@@ -1,15 +1,22 @@
 Mfast::Application.routes.draw do
+  get "subscribers/create"
+
+  get "beta_users/new"
+
+  get "beta_users/create"
+
   get "feedback/new"
 
   get "feedback/create"
 
   get "staticpages/index" 
 
-  post 'staticpages/index' => 'feedbacks#create'
+  post 'beta_users/create', to: 'beta_users#create', as: 'beta_users'
 
   root :to => 'staticpages#index'
-  resources :feedbacks
-  post 'feedbacks', to: 'feedbacks#create', as: 'feedbacks'
+  resources :feedbacks, :beta_users
+  post 'feedback/create', to: 'feedbacks#create', as: 'feedbacks'
+  post 'subscribers/create', to: 'subscribers#create', as: 'subscribers'
 
 
   # The priority is based upon order of creation:

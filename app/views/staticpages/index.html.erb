@@ -12,7 +12,7 @@
       display:none; /* Hide the DIV */
       position:fixed;  
       _position:absolute; /* hack for internet explorer 6 */  
-      height:400px;  
+      height:430px;  
       width:500px;  
       background:#7f8c8d;  
       left: 400px;
@@ -61,7 +61,6 @@
 
     <script>
         // History, and back button
-    console.log('dddd');
     $(function() {
     jQuery.history.listen()
       $('#nav .nav .scroll').click(function() {
@@ -79,17 +78,17 @@
           <h1 id = "text" style="color:black" ><strong>Want to be a beta tester?</strong></h1>
          </div> 
       <div style = "float:right; width:50px;">
-        <a class="btn btn-medium btn-danger icon-remove"  id="popup-close"></a>
+        <a class="btn btn-medium btn-danger icon-remove"  id="beta-no"></a>
       </div>
-      <%= form_for(@feedback, :remote => true) do |f| %>
+      <%= form_for(@betaUser, :remote => true, url:{action:"create", controller:"beta_users"}) do |f| %>
           <div class="span6">
-             <%= f.text_field :name, placeholder:"Your Name", :class => "subscribe" %>
-              <%= f.text_field :email, placeholder:"Your Email", :class => "subscribe" %>
-              <%= f.text_field :institution, placeholder:"Your Institution", :class => "subscribe" %>
-              <%@feedback.beta=true%>
+             <%= f.text_field :name, :class=>'subscribe', placeholder:"Your Name"%>
+              <%= f.text_field :email, placeholder:"Your Email", :class=>'subscribe' %>
+              <%= f.text_field :institution, placeholder:"Your Institution", :class=>'subscribe'%>
+             
           </div>
           <div class="span2">
-            <button type="submit"  id="submit-subscribe" class="btn pull-right subscribe">Get the Beta!</button>
+            <button type="submit"  id="submit-beta" class="btn pull-right subscribe">Get the Beta!</button>
             
           </div>
           <%end%>
@@ -158,13 +157,13 @@
         </div>
 
           </div>
-          <div class="span5 pull-right">
+          <div class="span5 pull-left">
             <ul class="big-list">
               <li><i class="icon-bolt"></i>10x faster</li>
               <li><i class="icon-tablet"></i>See more patients</li>
               <li><i class="icon-cloud"></i>More treatment time</li>
               <li><i class="icon-user-md"></i>Easy to learn & affordable</li><br>
-              <li><i class="icon-user-md"></i>Clinically Validated</li>
+              <li><i class="icon-user-md"></i>Clinically validated</li>
             </ul>
             <br />
             <a href="#features" title="Check out more freatures!" class="scroll btn btn-centered"><i class="icon-caret-down"></i> Learn more</a>
@@ -294,50 +293,57 @@
 
         <hr>
         <div class="row-fluid inner-page team">
-          <div class="span5 offset2" >
-            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="assets/kourosh.png">
-            <h2>Kourosh Parsapour MD MBA</h2>
-            <h4>Founder<br></h4>
-            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/kourosh-parsapour-md-mba/11/70/679')%></p>
+          <div class="span5 offset1" >
+            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px; display: block; margin-left: auto;margin-right: auto" src="assets/kourosh.png">
+            
+            <h2 style="text-align:center">Kourosh Parsapour MD MBA</h2>
+            <h4 style="text-align:center">Founder<br>
+            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/kourosh-parsapour-md-mba/11/70/679')%></h4>
           </div><!-- /.span4 -->
-
+     
           <div class="span5">
-            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="/assets/steve.jpeg">
-            <h2>Bill Spath MBA</h2>
-            <h4>Founder • CFO <br></h4>
-            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/bill-spath/6/206/74a')%><p>
+         <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px; display: block; margin-left: auto; margin-right: auto" src="assets/Bill.jpg">
+            
+            <h2 style="text-align:center">Bill Spath MBA</h2>
+            <h4 style="text-align:center">Founder • CFO<br>
+            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/bill-spath/6/206/74a')%></h4>
           </div><!-- /.span4 -->
         </div>
+
         <div class="row-fluid inner-page team">
 
-   
-          <div class="span5 offset2">
-            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="/assets/steve.jpeg">
-            <h2>Jay Han MD</h2>
-            <h4>Founder<br></h4>
-            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/jay-j-han-md/5b/682/62a')%></p>
+            
+        <div class="span5 offset1">
+         <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px; display: block; margin-left: auto; margin-right: auto" src="assets/Bill.jpg">
+            
+            <h2 style="text-align:center">Jay Han MD</h2>
+            <h4 style="text-align:center">Founder • CFO<br>
+            <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/jay-j-han-md/5b/682/62a')%></h4>
           </div><!-- /.span4 -->
+        
 
-          <div class="span5">
-            <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="/assets/gregorij.jpg">
-            <h2>Gregorij Kurillo PHD</h2>
-            <h4>Founder<br></h4>
-            <%= link_to("LinkedIn", 'http://www.linkedin.com/profile/view?id=23960600&locale=en_US&trk=tyah2')%></p>
+        <div class="span5">
+         <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px; display: block; margin-left: auto; margin-right: auto" src="assets/gregorij.jpg">
+            
+            <h2 style="text-align:center">Jay Han MD</h2>
+            <h4 style="text-align:center">Founder • CFO<br>
+            <%= link_to("LinkedIn", 'http://www.linkedin.com/profile/view?id=23960600&locale=en_US&trk=tyah2')%></h4>
           </div><!-- /.span4 -->
         </div>
+        
         
         <!-- Newsletter -->
         
       <div class="newsletter color-1" >
-        <div class="inner-page" id="subscribe">
+        <div class="inner-page">
+          
           <h2 class="page-headline">Keep up with what we're doing</h2>
         </div>
         <div class="inner-page row-fluid">
-
           <div class="span4">
             <h4><strong>Be cool</strong>, subscribe to get our latest news</h4>
           </div>
-          <%= form_for(:feedback, :remote => true) do |f| %>
+          <%= form_for(@subscriber, :remote => true, url:{action:"create", controller:"subscribers"}) do |f| %>
           <div class="span6">
              <%= f.text_field :email, placeholder:"name@example.com", :class => "subscribe" %>
             
@@ -347,34 +353,43 @@
             
           </div>
           <%end%>
+
+        </div>
+      
+      <br>
+      <div class="inner-page row-fluid" id="subscribe-confirmed" style="display:none">
+        <div class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert"></button>
+          <strong>Thanks for subscribing!</strong> We'll keep you up to date on our latest and greatest.
         </div>
       </div>
+
       
         
 
         
         <div id='inputform'>
-        <%= form_for(:feedback, :remote => true) do |f| %>
+        <%= form_for(@feedback, :remote => true, url:{action:"create", controller:"feedbacks"}) do |f| %>
         <div id="contact" class="page color-3">
 
 
           <div class="inner-page">
-            <div class="inner-page row-fluid" id="subscribe-confirmed" style="display:none">
-              <div class="alert alert-success">
-                      <button type="button" class="close" data-dismiss="alert">×</button>
-                      <strong>Thanks for subscribing!</strong> We'll keep you up to date on our latest and greatest.
-                    </div>
-              </div>
+            
             <h2 class="page-headline">Get in touch and stay updated</h2>
           </div>
           <div class="row-fluid inner-page contact">
             <div class="span6">
               <h3>What's on your mind?</h3>
-              <%= f.text_area :input, placeholder:"Feedback", rows:6, id:"comment"   %>
+              <%= f.text_area :input, placeholder:"What's on your mind?", rows:6   %>
               <%= f.text_field :email, placeholder:"name@example.com" %>
               <%= f.text_field :name, placeholder:"Name" %>
              
-              <button type="submit" id="submit-input" class="btn btn-centered">Contact Us</button>
+              <button type="submit" id="submit-feedback" class="btn btn-centered">Contact Us</button>
+              <div class="inner-page row-fluid" id="feedback-confirmed" style="display:none">
+              <div class="alert alert-success">
+                      <strong>Thanks for your input!</strong> We appreciate the feedback.
+                    </div>
+              </div>
             </div>
 
             <div class="span6">
@@ -388,9 +403,8 @@
         <% end %>
       </div>
 
-      <div class="inner-page row-fluid" id="input-confirmed" style="display:none">
+      <div class="inner-page row-fluid" id="feedback-confirmed" style="display:none">
       <div class="alert alert-success">
-              <button type="button" class="close" data-dismiss="alert">×</button>
               <strong>Thanks, got it!</strong> We appreciate your input.
             </div>
       </div>
@@ -422,6 +436,9 @@
     $('#subscribe-confirmed').show();
     });
 
+$('#submit-feedback').click(function() {
+    $('#feedback-confirmed').show();
+    });
   function unloadPopupBox() { // TO Unload the Popupbox
       $('#popup_box').fadeOut("slow");
       $("#content").css({ // this is just for style   
@@ -441,26 +458,15 @@
 
     $("#beta").click(function () {
 
-      loadPopupBox();
-      $('#popup_box_container');
-      $('#popup_box_container').append('<div style="margin-left:25px" id="centered">');
-      $('#centered').append('<a class="btn btn-large btn-success" href="/auth/facebook" id="facebook-go">I understand</a>');
-    $('#centered').append('<a class="btn btn-large btn-danger" id="facebook-no" style="margin-left:25px">No! Take me back!</a>');    
+      loadPopupBox();  
 
     $('#beta-no').click(function(){
       unloadPopupBox();
-      $('#note').remove();
-      $('#centered').remove();
-      $('#facebook-no').remove();
-      $('#facebook-go').remove();
+  
+
     });
       });
 
   console.log('hehe');
-  $(document).ready(function() {
-     console.log('testtter'); 
-    
 
-
-  });
 </script>
