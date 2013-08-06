@@ -166,7 +166,7 @@
               <li><i class="icon-user-md"></i>Clinically validated</li>
             </ul>
             <br />
-            <a href="#features" title="Check out more freatures!" class="scroll btn btn-centered"><i class="icon-caret-down"></i> Learn more</a>
+            <a href="#problem" title="Check out more freatures!" class="scroll btn btn-centered"><i class="icon-caret-down"></i> Learn more</a>
           </div>
         </div>
       </div>
@@ -226,7 +226,7 @@
          <div id="solution" class="page color-3">
           <div class="inner-page">
             <h2 class="page-headline">Introducing MFAsT</h2>
-            <h4 class="page-headline"> Motion and Function Assestment Tool</h4>
+            <h4 class="page-headline"> Motion & Function Assestment Tool</h4>
           </div>
 
         <!-- Vectors -->
@@ -236,9 +236,9 @@
             <%= image_tag('responsive-vectors.png', :class => 'figurette lazy')%>
           </div>
           <div class="span6">
-            <h3>MFAsT addresses the critical shortage of therapists by improving their efficiency and decreasing the paperwork. </h3>
-            <p class="lead">The MFAsT software has been clinically validated as a more accurate tool for shoulder evaluation and can correlate the measurements to functions that are necessary in daily life activities such as feeding, grooming, dressing, and toilette hygiene. </p>
-            <p>Cutting edge diagnostic software delivers an intuitive 3D graph of patients’ function and improvement, making assessments more engaging and therapy more compelling.</p>
+            <h3>Efficient and clinically validated. </h3>
+            <p class="lead">Range of motion evaluation automatically correlates to activities of daily life (ADL). </p>
+            <p class="lead">Diagnostic software delivers an intuitive 3D graph of patients’ function and improvement to make assessments more engaging and therapy more compelling.</p>
           </div>
         </div> <!-- /vectors -->
 
@@ -249,20 +249,22 @@
           <ul class="features list-inline">
             <li>
               <h3><i class="icon-bolt"></i> Fast.</h3>
-              <p>Collect range of motion data for the entire body in 2 minutes.</p>
-              <p>Less time spent on data collection allows Physical Therapists more time to focus on patient care or see more patients.</p>
+              <p class="lead">20+ minutes to see more patients or focus on patient care.
+              
             </li>
             <li>
-              <h3><i class="icon-bar-chart"></i> Meaningful.</h3>
+              <h3><i class="icon-bar-chart"></i> Less Paperwork,Seamless, Streamlined
+              </h3>
+              <p>Patients and therapists interact with clinical data like never before.</p>
+              <p>Point of care data autopopulates billing, insurance forms, progress notes, and referal letters.</p>
+            </li>
+            <li>
+              <h3><i class="icon-random"></i> Engaging.</h3>
+              
               <p>Interact with collected data like never before. See visual representations of a patient's
                 usuable workspace.
               </p>
               <p>Easily identify the practical implications of the data collected.</p>
-            </li>
-            <li>
-              <h3><i class="icon-random"></i> Shareable.</h3>
-              <p>Data is easily exported in a file format of your choice.</p>
-              <p>Use output file to auto-populate insurance forms or medical records with the push of a button.</p>
             </li>
             </ul>
         </div>
@@ -296,7 +298,7 @@
           <div class="span5 offset1" >
             <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px; display: block; margin-left: auto;margin-right: auto" src="assets/kourosh.png">
             
-            <h2 style="text-align:center">Kourosh Parsapour MD MBA</h2>
+            <h3 style="text-align:center">Kourosh Parsapour MD MBA</h3>
             <h4 style="text-align:center">Founder<br>
             <%= link_to("LinkedIn", 'http://www.linkedin.com/pub/kourosh-parsapour-md-mba/11/70/679')%></h4>
           </div><!-- /.span4 -->
@@ -460,12 +462,14 @@ $('#submit-feedback').click(function() {
 
       loadPopupBox();  
 
-    $('#submit-beta').click(function(){
+   
+      });
+
+     $('#beta-no').click(function(){
       unloadPopupBox();
   
 
     });
-      });
 
   console.log('hehe');
 
