@@ -218,12 +218,7 @@
           </div>
           <div class="span6">           
             <h3>It's time for a change.</h3>
-            <p class="lead">Physical Therapist's need more time to maintain a high level of patient care. This is how we do it: </p>
-            <ul class="list-wide">
-              <li><i class="icon-check"></i> Decrease data collection time</li>
-              <li><i class="icon-check"></i> Collect digital data</li>
-              <li><i class="icon-check"></i> Use data to autopopulate forms</li>
-            </ul>         
+            <p class="lead">Our clinical solutions have been invented and validated by experts in physical medicine & rehabilitation, telehealth, computer and electrical engineering, and orthopedic medical devices.</p>   
           </div>
         </div>
 
@@ -303,28 +298,28 @@
 
 
 
-      <div class="row-fluid inner-page team">
-        <div id="team1">
-          <h1 id="showfounders">Founding Team</h1>
-          <div id="founders"a >
-            <%= render "/staticpages/foundingTeam" %>
+        <div class="row-fluid inner-page">
+          <div id="team1">
+            <h1 id="showfounders">Founding Team</h1>
+            <div id="founders"a >
+              <%= render "/staticpages/foundingTeam" %>
+            </div>
+          </div>
+          <div id="team2">
+            <h1 id="showclinical-advisors">Clinical Advisors</h1>
+            <div id="clinical-advisors" style="display:none" >
+              <%= render "/staticpages/clinical-advisors" %>
+            </div>
+          </div>
+          <div id="team3">
+            <h1 id="showadvisors">Advisors</h1>
+            <div id="advisors" style="display:none" >
+              <%= render "/staticpages/advisors" %>
+            </div>
           </div>
         </div>
-        <div id="team2">
-          <h1 id="showadvisors">Advisors</h1>
-          <div id="advisors" style="display:none" >
-            <%= render "/staticpages/advisors" %>
-          </div>
-        </div>
-        <div id="team3">
-          <h1 id="showclinical-advisors">Clinical Advisors</h1>
-          <div id="clinical-advisors" style="display:none" >
-            <%= render "/staticpages/clinical-advisors" %>
-          </div>
-        </div>
-      </div>
 
-       
+      </div>
         
 
         
@@ -336,11 +331,11 @@
       <div class="newsletter color-1" >
         <div class="inner-page">
           
-          <h2 class="page-headline">Keep up with what we're doing</h2>
+          <h2 class="page-headline">Keep up with healthcare delivered at 21st century standards</h2>
         </div>
         <div class="inner-page row-fluid">
           <div class="span4">
-            <h4><strong>Be cool</strong>, subscribe to get our latest news</h4>
+            <h4><strong>Subscribe</strong> to get our latest news</h4>
           </div>
           <%= form_for(@subscriber, :remote => true, url:{action:"create", controller:"subscribers"}) do |f| %>
           <div class="span6">
@@ -354,7 +349,7 @@
           <%end%>
 
         </div>
-      
+      </div>
       <br>
       <div class="inner-page row-fluid" id="subscribe-confirmed" style="display:none">
         <div class="alert alert-success">
@@ -368,20 +363,21 @@
 
         
         <div id='inputform'>
-        <%= form_for(@feedback, :remote => true, url:{action:"create", controller:"feedbacks"}) do |f| %>
-        <div id="contact" class="page color-3">
+          <%= form_for(@feedback, :remote => true, url:{action:"create", controller:"feedbacks"}) do |f| %>
+          <div id="contact" class="page color-3">
 
 
           <div class="inner-page">
             
-            <h2 class="page-headline">Get in touch and stay updated</h2>
+            <h2 class="page-headline">Stay in Touch. Give us feedback.</h2>
           </div>
           <div class="row-fluid inner-page contact">
             <div class="span6">
               <h3>What's on your mind?</h3>
-              <%= f.text_area :input, placeholder:"What's on your mind?", rows:6   %>
-              <%= f.text_field :email, placeholder:"name@example.com" %>
+              <%= f.text_area :input, placeholder:"Let us know what you like or dislike. Ask us questions. How can we make your life easier in the clinic?", rows:6   %>
               <%= f.text_field :name, placeholder:"Name" %>
+              <%= f.text_field :email, placeholder:"name@example.com" %>
+              
              
               <button type="submit" id="submit-feedback" class="btn btn-centered">Contact Us</button>
               <div class="inner-page row-fluid" id="feedback-confirmed" style="display:none">
@@ -402,12 +398,14 @@
         <% end %>
       </div>
 
-      <div class="inner-page row-fluid" id="feedback-confirmed" style="display:none">
-      <div class="alert alert-success">
-              <strong>Thanks, got it!</strong> We appreciate your input.
-            </div>
-      </div>
+       <div class="newsletter color-1" >
+        <div class="inner-page">
+          
+          <h4 class="page-headline">5plus would like to thank the following organizations for their support" and we should have the logos and links to CITRIS, Foundry@CITRIS, UC Davis, UC Berkeley, CTRC, Electronic Arts, Microsoft, Go2Care, Knobbe Marten, http://citris-uc.org/, (Center for Information Technology Research in the Interest of Society: a multi-UC campus research center that brings together engineering and social scientists from UC Berkeley, UC Merced, and UC Santa Cruz with medical researchers from UC Davis Medical Center)</h4>
+          <br>
+        </div>
 
+     
        <footer class="page color-5">
         <div class="inner-page row-fluid">
           <div class="span6 social">
@@ -476,27 +474,27 @@ $('#close-beta').click(function(){
     var shown="#founders";
 
     $("#showfounders").click(function () {
-      $(shown).slideUp('slow', function() {
-      });
-      $('#founders').slideDown('slow', function() {
+      // $(shown).fadeOut('slow', function() {
+      // });
+      $('#founders').fadeIn('slow', function() {
     // Animation complete.
       shown="#founders";
       });
     });
 
     $("#showadvisors").click(function () {
-      $(shown).slideUp('slow', function() {
-      });
-      $('#advisors').slideDown('slow', function() {
+      // $(shown).fadeOut('slow', function() {
+      // });
+      $('#advisors').fadeIn('slow', function() {
     // Animation complete.
       shown="#advisors";
       });
     });
 
     $("#showclinical-advisors").click(function () {
-      $(shown).slideUp('slow', function() {
-      });
-      $('#clinical-advisors').slideDown('slow', function() {
+      // $(shown).fadeOut('slow', function() {
+      // });
+      $('#clinical-advisors').fadeIn('slow', function() {
     // Animation complete.
       shown="#clinical-advisors";
       });
