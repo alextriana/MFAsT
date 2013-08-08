@@ -36,7 +36,10 @@
     <script src="http://vjs.zencdn.net/4.1/video.js"></script>
   
     
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="//cdn.sublimevideo.net/js/eunrkkbu.js"></script>
+
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    
     <!-- Le styles -->
 
 
@@ -143,7 +146,7 @@
 
            <div class="span7 demo-video">
           <!--[if !IE]> -->
-            <video id="example_video_1" class="video-js vjs-default-skin"
+            <video id="example_video_1" class="video-js vjs-default-skin" style="z-index:0"
                 controls preload="auto" width="640" height="264"
                 poster="http://video-js.zencoder.com/oceans-clip.png"
                 data-setup='{"example_option":true}'>
@@ -166,9 +169,9 @@
           <div class="span5 pull-left">
             <ul class="big-list">
               <li><i class="icon-bolt"></i>10x faster</li>
-              <li><i class="icon-tablet"></i>See more patients</li>
-              <li><i class="icon-cloud"></i>More treatment time</li>
-              <li><i class="icon-user-md"></i>Easy to learn & affordable</li><br>
+              <li><i class="icon-group"></i>See more patients</li>
+              <li><i class="icon-time"></i>More treatment time</li>
+              <li><i class="icon-credit-card"></i>Easy to learn & affordable</li><br>
               <li><i class="icon-user-md"></i>Clinically validated</li>
             </ul>
             <br />
@@ -180,7 +183,7 @@
         <div class="sign-up color-2 visible-desktop">
         <div class="row-fluid inner-page">
           <div class="span12">
-            <h4 style="text-align:center">We develop Kinect-enabled digital health tools to provide more physical therapy at a lower cost.</h4>
+            <h3 style="text-align:center">Kinect-enabled digital health tools provide more physical therapy at a lower cost.</h4>
           </div>
         </div>
       </div>
@@ -198,14 +201,16 @@
                <p>2013:<br>Outpatients: 5.4 million <br>Physical Therapists: 158,000</p>
             </li>
             <li>
-              <h3><i class="icon-time"></i> Current process uses outdated tools.</h3>
+              <%=image_tag('gmeter.jpg', :class => 'offset1') %> <%=image_tag('penpaper.jpg')%> <%=image_tag('comp.jpg')%>
+              <h3>Current process is outdated.</h3>
               <p>The goniometer is an outdated medical tool. It inhibits the speed of data collection, as 
                 each joint's range of motion must be manually measured.
               </p>
               <p>It can take 30 minutes to collect *full body range of motion data*.
             </li>
             <li>
-              <h3><i class="icon-pencil"></i> Coding, Billing, and Reporting.</h3>
+               <%=image_tag('paperwork.jpg', :class=>'offset2')%> <%=image_tag('moneybag.jpg') %>  <%=image_tag('comp.jpg')%>
+              <h3> Coding, Billing, and Reporting.</h3>
               <p>In 2013, CMS mandated quantified measurement and functional status reports for payment. </p>
               <p>Medical records and insurance forms quickly make for an inefficient and labor intensive distribution.</p>
             </li>
@@ -232,16 +237,23 @@
 
         <!-- Vectors -->
         <div class="row-fluid inner-page">
-          <div class="span6 lazy-container">
-            
-            <%= image_tag('responsive-vectors.png', :class => 'figurette lazy')%>
-          </div>
-          <div class="span6">
+
+            <div class="span6">
             <h3>Efficient and clinically validated. </h3>
             <p class="lead">Range of motion evaluation automatically correlates to activities of daily life (ADL). </p>
             <p class="lead">Diagnostic software delivers an intuitive 3D graph of patients’ function and improvement to make assessments more engaging and therapy more compelling.</p>
           </div>
-        </div> <!-- /vectors -->
+          <div class="span6 lazy-container inner-page">
+            <video id="the-video" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="640" height="360" title="Midnight Sun" data-uid="a240e92d" preload="none" >
+  <source src="https://cdn.sublimevideo.net/vpa/ms_360p.mp4" />
+  <source src="https://cdn.sublimevideo.net/vpa/ms_720p.mp4" data-quality="hd" />
+  <source src="https://cdn.sublimevideo.net/vpa/ms_360p.webm" />
+  <source src="https://cdn.sublimevideo.net/vpa/ms_720p.webm" data-quality="hd" />
+</video>
+          
+          </div>
+        </div>
+        
 
         <hr>
 
@@ -260,8 +272,8 @@
               <p>Point of care data autopopulates billing, insurance forms, progress notes, and referal letters.</p>
             </li>
             <li>
-              <h3><i class="icon-random"></i> Engaging.</h3>
-              
+              <%=image_tag('graph1.png', :class=>'offset2')%> <%=image_tag('graph2.png') %>  <%=image_tag('graph3.png')%>
+              <h3>Engaging.</h3>   
               <p>Interact with collected data like never before. See visual representations of a patient's
                 usuable workspace.
               </p>
@@ -320,6 +332,7 @@
         </div>
 
       </div>
+    </div>
         
 
         
@@ -331,7 +344,7 @@
       <div class="newsletter color-1" >
         <div class="inner-page">
           
-          <h2 class="page-headline">Keep up with healthcare delivered at 21st century standards</h2>
+          <h2 class="page-headline">Keep up with 21st century healthcare</h2>
         </div>
         <div class="inner-page row-fluid">
           <div class="span4">
@@ -347,9 +360,7 @@
             
           </div>
           <%end%>
-
         </div>
-      </div>
       <br>
       <div class="inner-page row-fluid" id="subscribe-confirmed" style="display:none">
         <div class="alert alert-success">
@@ -357,6 +368,7 @@
           <strong>Thanks for subscribing!</strong> We'll keep you up to date on our latest and greatest.
         </div>
       </div>
+    </div>
 
       
         
@@ -367,36 +379,37 @@
           <div id="contact" class="page color-3">
 
 
-          <div class="inner-page">
+            <div class="inner-page">
             
-            <h2 class="page-headline">Stay in Touch. Give us feedback.</h2>
+              <h2 class="page-headline">Stay in Touch. Give us feedback.</h2>
+            </div>
+            <div class="row-fluid inner-page contact">
+              <div class="span6">
+                <h3>What's on your mind?</h3>
+                <%= f.text_area :input, placeholder:"Let us know what you like or dislike. Ask us questions. How can we make your life easier in the clinic?", rows:6   %>
+                <%= f.text_field :name, placeholder:"Name" %>
+                <%= f.text_field :email, placeholder:"name@example.com" %>
+                
+               
+                <button type="submit" id="submit-feedback" class="btn btn-centered">Contact Us</button>
+                <div class="inner-page row-fluid" id="feedback-confirmed" style="display:none">
+                  <div class="alert alert-success">
+                          <strong>Thanks for your input!</strong> We appreciate the feedback.
+                  </div>
+                </div>
+              </div>
+
+              <div class="span6">
+                <div class="btn-container centered lazy-container text-center">
+                  <%=image_tag('transparent.gif')%>
+                </div>
+              </div>
           </div>
-          <div class="row-fluid inner-page contact">
-            <div class="span6">
-              <h3>What's on your mind?</h3>
-              <%= f.text_area :input, placeholder:"Let us know what you like or dislike. Ask us questions. How can we make your life easier in the clinic?", rows:6   %>
-              <%= f.text_field :name, placeholder:"Name" %>
-              <%= f.text_field :email, placeholder:"name@example.com" %>
-              
-             
-              <button type="submit" id="submit-feedback" class="btn btn-centered">Contact Us</button>
-              <div class="inner-page row-fluid" id="feedback-confirmed" style="display:none">
-              <div class="alert alert-success">
-                      <strong>Thanks for your input!</strong> We appreciate the feedback.
-                    </div>
-              </div>
-            </div>
-
-            <div class="span6">
-              <div class="btn-container centered lazy-container text-center">
-                <%=image_tag('transparent.gif')%>
-              </div>
-            </div>
-        </div>
-
         </div>
         <% end %>
       </div>
+
+
 
        <div class="newsletter color-1" >
         <div class="inner-page">
@@ -404,6 +417,7 @@
           <h4 class="page-headline">5plus would like to thank the following organizations for their support" and we should have the logos and links to CITRIS, Foundry@CITRIS, UC Davis, UC Berkeley, CTRC, Electronic Arts, Microsoft, Go2Care, Knobbe Marten, http://citris-uc.org/, (Center for Information Technology Research in the Interest of Society: a multi-UC campus research center that brings together engineering and social scientists from UC Berkeley, UC Merced, and UC Santa Cruz with medical researchers from UC Davis Medical Center)</h4>
           <br>
         </div>
+      </div>
 
      
        <footer class="page color-5">
@@ -499,6 +513,8 @@ $('#close-beta').click(function(){
       shown="#clinical-advisors";
       });
     });
+
+
 
 
     
