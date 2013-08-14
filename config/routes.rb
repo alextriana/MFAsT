@@ -9,7 +9,8 @@ Mfast::Application.routes.draw do
 
   get "feedback/create"
 
-  get "staticpages/index" 
+  get "staticpages/index"
+  match '/test', to: 'staticpages#test'
 
   post 'beta_users/create', to: 'beta_users#create', as: 'beta_users'
 

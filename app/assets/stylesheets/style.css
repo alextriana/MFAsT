@@ -10376,7 +10376,7 @@ footer {
   background: rgba(0, 0, 0, 0.8);
 }
 .navbar #nav ul {
-  font-size: 15px;
+  font-size: 45px;
   float: right;
   margin: 0;
 }
@@ -10419,10 +10419,10 @@ footer {
 }
 /* Menu colors */
 .active .brand-2 {
-  background-color: #3a9ac4 !important;
+  background-color: #7ecefd !important;
 }
 .brand-2:hover {
-  background-color: #3a9ac4 !important;
+  background-color: #7ecefd !important;
 }
 .active .brand-3 {
   background-color: #f6fcff !important;
