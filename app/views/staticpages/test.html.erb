@@ -10,6 +10,8 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
     <style> 
+
+   
     	.header {
 
     		font-family: 'Roboto', sans-serif;
@@ -29,12 +31,18 @@
     	}
 
     	.splash-1 {
-    		background-color: #7ecefd;
-    		-webkit-background-size: cover;
-  			-moz-background-size: cover;
-  			-o-background-size: cover;
- 			background-size: cover;
+    		background: #7ecefd;
+
     	}
+
+        .splash-2 {
+            background: #fff6e5;
+          
+        }
+
+        .center-text {
+            text-align: center
+        }
     </style>
 
 
@@ -50,9 +58,20 @@
 
  <%= render "/staticpages/navbar" %>
 
+<body>
+    <%= render "/staticpages/part1" %>
+	
+    <div class="splash-2" id="problem" style="padding-top:95px; padding-bottom:95px">
+        <div class="row-fluid container">
+            </br>
+            <div class="center-text">
+                <h1 class="header" style="margin:0px 0; color:black">
+                    The Problem
+                </h1>
+            </div>
+        </div>
+    </div>
 
-	<div id="home" class=" splash-1">
-		<p>herrok</p>
-	</div>
+</body>
 
 	
