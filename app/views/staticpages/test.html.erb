@@ -9,6 +9,9 @@
 
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <style> 
 
    
@@ -18,14 +21,45 @@
             color:black;
     	}
 
-        .header-white {
+        .header-white-small {
 
             font-family: 'Roboto', sans-serif;
             color:white;
+            font-size: 20pt;
+            line-height: 20pt;
+            font-weight:bold;
+
         }
+
+        .custom-container{
+            margin-right:120px; 
+            margin-left:8%
+        }
+
+        .header-white-medium {
+
+            font-family: 'Roboto', sans-serif;
+            color:white;
+            font-size: 25pt;
+            line-height: 25pt;
+
+        }
+
+        .header-white-large {
+
+            font-family: 'Roboto', sans-serif;
+            color:white;
+            font-size: 38pt;
+            line-height: 38pt;
+
+        }
+
+
     	.standardText{
-    		font-family: 'Open Sans', sans-serif;
+    		font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
             font-size: 16pt;
+            line-height: 16pt;
+            text-align:normal
     	}
 
     	.black {
@@ -47,6 +81,10 @@
           
         }
 
+        .splash-3 {
+            background: #2185c5
+        }
+
         .center-text {
             text-align: center
         }
@@ -60,6 +98,16 @@
 
     </script>
 
+    <script>
+        // History, and back button
+    $(function() {
+    jQuery.history.listen()
+      $('#nav .nav .scroll').click(function() {
+      $.history.push('test.html' + $(this).attr('href')); 
+      });
+    });
+    </script>
+
 
 </head>
 
@@ -67,17 +115,9 @@
 
 <body>
     <%= render "/staticpages/part1" %>
-	
-    <div class="splash-2" id="problem" style="padding-top:95px; padding-bottom:95px">
-        <div class="row-fluid container" style="padding-top:0px; padding-bottom:0px">
-            </br>
-            <div class="center-text">
-                <h1 class="header-black" style="margin:0px 0">
-                    The Problem
-                </h1>
-            </div>
-        </div>
-    </div>
+	<%= render "/staticpages/part2" %>
+    <%= render "/staticpages/part3" %>
+    <%= render "/staticpages/part4" %>
 
 </body>
 
