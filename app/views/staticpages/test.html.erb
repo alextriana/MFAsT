@@ -21,12 +21,18 @@
             color:black;
     	}
 
+        .header-white {
+
+            font-family: 'Roboto', sans-serif;
+            color:white;
+        }
+
         .header-white-small {
 
             font-family: 'Roboto', sans-serif;
             color:white;
             font-size: 20pt;
-            line-height: 20pt;
+            line-height: 25pt;
             font-weight:bold;
 
         }
@@ -41,7 +47,7 @@
             font-family: 'Roboto', sans-serif;
             color:white;
             font-size: 25pt;
-            line-height: 25pt;
+            line-height: 30pt;
 
         }
 
@@ -50,7 +56,7 @@
             font-family: 'Roboto', sans-serif;
             color:white;
             font-size: 38pt;
-            line-height: 38pt;
+            line-height: 42pt;
 
         }
 
@@ -58,7 +64,7 @@
     	.standardText{
     		font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
             font-size: 16pt;
-            line-height: 16pt;
+            line-height: 20pt;
             text-align:normal
     	}
 
@@ -68,7 +74,7 @@
 
     	.rory-nav-text {
     		padding-top:15px; 
-    		font-size:125%
+    		font-size:16pt;
     	}
 
     	.splash-1 {
@@ -82,16 +88,49 @@
         }
 
         .splash-3 {
-            background: #2185c5
+            background: #2185c5;
+        }
+
+        .splash-4 {
+            background: #3e454c;
+        }
+
+        .splash-5 {
+            background:#3e454c;
         }
 
         .center-text {
-            text-align: center
+            text-align: center;
         }
+
+        .portion-container{
+            width:80%;
+            padding: 20px 5% 20px 15%;
+        }
+
+        .third {
+            width:30%;
+            display:inline-block;
+            padding: 0 1% 0 1%;
+        }
+
+        .two-third {
+            width:60%;
+            display:inline-block;
+            padding: 0 1% 0 1%;
+        }
+
+        .half {
+            width:42%;
+            display:inline-block;
+            padding: 0 1% 0 1%;
+        }
+
     </style>
 
 
-     <script>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+   
     if (typeof jQuery == 'undefined') {
       document.write(unescape("%3Cscript src='assets/js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
     }
@@ -118,7 +157,13 @@
 	<%= render "/staticpages/part2" %>
     <%= render "/staticpages/part3" %>
     <%= render "/staticpages/part4" %>
+    <%= render "/staticpages/part5" %>
+    <%= render "/staticpages/subscribe" %>
+    <%= render "/staticpages/contact" %>
+    <%= render "/staticpages/contributors" %>
 
+   <%= render "staticpages/footer" %>
+    
 </body>
 
 	

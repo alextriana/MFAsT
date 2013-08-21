@@ -1,0 +1,19 @@
+<div class="splash-4" style="padding-top:95px; padding-bottom:95px">
+    <div class="row-fluid container" style="padding-top:0px; padding-bottom:0px">
+        </br>
+        <div class="span11" style="padding: 0 0 0 13%">
+
+            <h1 class="header-white" style="margin-top:0px">
+                Keep up to date with 21st century healthcare
+            </h1>
+        </div>
+        <div class="span11" style="padding: 0 0 0 13%">
+            <%= form_for(@subscriber, :remote => true, url:{action:"create", controller:"subscribers"}) do |f| %>
+             <%= f.text_field :email, placeholder:"name@example.com", :class => 'span8', :style => 'height:40px; margin: 0 20px 0 20px' %>
+             
+             <%= f.submit 'Subscribe', :class => 'span2 btn subscribe', :id => 'submit-subscribe' %>
+
+            <% end%>
+        </div>
+    </div>
+</div>
