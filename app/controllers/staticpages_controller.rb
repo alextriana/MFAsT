@@ -18,4 +18,8 @@ class StaticpagesController < ApplicationController
     @subscriber=Subscriber.new
 
     end
+
+    def greek
+      
+    end
 end

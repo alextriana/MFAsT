@@ -12,6 +12,7 @@ Mfast::Application.routes.draw do
   get "staticpages/index"
   match '/test', to: 'staticpages#test'
   match '/test2', to: 'staticpages#test2'
+  match '/greek', to: 'staticpages#greek'
 
   post 'beta_users/create', to: 'beta_users#create', as: 'beta_users'
 
