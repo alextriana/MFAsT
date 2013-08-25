@@ -7,11 +7,11 @@
                 Keep up to date with 21st century healthcare
             </h1>
         </div>
-        <div class="span11" style="padding: 0 0 0 13%">
+        <div class="span12" style="padding: 0 0 0 13%">
             <%= form_for(@subscriber, :remote => true, url:{action:"create", controller:"subscribers"}) do |f| %>
-             <%= f.text_field :email, placeholder:"name@example.com", :class => 'span8', :style => 'height:40px; margin: 0 20px 0 20px' %>
+             <%= f.text_field :email, placeholder:"name@example.com", :class => '', :style => 'height:40px; margin-left:10%; width:50%' %>
              
-             <%= f.submit 'Subscribe', :class => 'span2 btn subscribe', :id => 'submit-subscribe', :style=> "background:#bf5f4d" %>
+             <%= f.submit 'Subscribe', :class => 'btn subscribe', :id => 'submit-subscribe', :style=> "margin-bottom: 3px; background:#bf5f4d; width:20%" %>
 
             <% end%>
         </div>
