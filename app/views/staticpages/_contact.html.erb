@@ -1,21 +1,22 @@
-<div id="contact" style="padding: 95px 0 95px 0">
+<div id="contact" style="padding: 30px 0 30px 0">
         <div class="row-fluid container" style="padding-top:0px; padding-bottom:0px">
             </br> 
-            <h1 class="header-black" style="padding-left:15%; margin-top:0px">
-                Stay in touch. Give us feedback.
-            </h1>
-
+            <div class="center-text">
+                <h1 class="header-black" style=" text-align:center" style="margin-top:0px">
+                    Stay in touch. Give us feedback.
+                </h1>
+            </div>
             <div class="portion-container">
-                <div class="half">
+                <div class="half" style="height:500px">
                   <%= image_tag('icons/ContactGraphic.png')%>
+                  
                   <br>
                   <br>
-                  <br>
-                  <br>                  
+                                 
 
                 </div>
 
-                <div class="half" style="height:450px; margin-left:5%">
+                <div class="half" style="height:500px; margin-left:5%;">
 
 
 
@@ -23,10 +24,10 @@
                       <%= form_for(@feedback, :remote => true, url:{action:"create", controller:"feedbacks"}) do |f| %>
                       <div id="contact">
 
-                             <p class="header-white-medium" style="color:black; padding:0px 0px 20px 0px"> What's on your mind?</p>
-                            <%= f.text_area :input, placeholder:"Let us know what you like or dislike. Ask us questions. How can we make your life easier in the clinic?", rows:6, :style=> 'width:100%; height:200px; display:block;'  %>
-                            <%= f.text_field :name, placeholder:"Name", :style=> 'width:100%; height:60px display:block' %>
-                            <%= f.text_field :email, placeholder:"name@example.com", :style=> 'width:100%; display:block' %>
+                             <p class="header-white-medium" style="color:black; padding:0px 0px 40px 0px"> What's on your mind?</p>
+                            <%= f.text_area :input, placeholder:"Let us know what you like or dislike. Ask us questions. How can we make your life easier in the clinic?", rows:6, :style=> 'width:100%; height:130px; display:block;border-radius:0px;'  %>
+                            <%= f.text_field :name, placeholder:"Name", :style=> 'width:100%; height:60px display:block; border-radius: 0px;' %>
+                            <%= f.text_field :email, placeholder:"name@example.com", :style=> 'width:100%; display:block; border-radius: 0px;' %>
                             
                            
                             <button type="submit" id="submit-feedback" class="btn btn-centered splash-4">Contact Us</button>

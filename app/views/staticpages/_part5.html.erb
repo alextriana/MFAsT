@@ -1,9 +1,11 @@
-<div id="team" class="splash-2" style="padding: 95px 0 95px 0">
+<div id="team" class="splash-2" style="padding: 30px 0 30px 0">
         <div class="row-fluid container" style="padding-top:0px; padding-bottom:0px">
-            </br> 
-            <h1 class="header-black" style="text-align:center; margin-top:0px">
-                Who we are and how it all got started.
-            </h1>
+            </br>
+            <div class="center-text">
+                <h1 class="header-black" style=" text-align:center" style="margin-top:0px">
+                    Who we are and how it all got started.
+                </h1>
+            </div>
 
             <div class="portion-container" >
                 <div class="third" style="width:40%">
@@ -22,9 +24,7 @@
                         <source src="https://cdn.sublimevideo.net/vpa/ms_360p.webm" />
                         <source src="https://cdn.sublimevideo.net/vpa/ms_720p.webm" data-quality="hd" />
                     </video>
-                    <br>
-                    <br>
-                    <br>
+                  
                     <br>
                     <br>
                     <br>
@@ -44,9 +44,11 @@
             <div class="portion-container">
                 
                 <div id="team1">
-                        <p class="header-white-medium" style="color:black; padding:0px 0px 20px 0px"> Founding Team</p>
-                        <div id="founders"a >
+                        <p class="header-white-medium" style="color:black; padding:0px 0px 20px 0px; "> The Team</p>
+                        <p class="header-white-medium" id='underline' style="color:black; padding:0px 0px 20px 0px; text-align:center"> <span id='founders'>Founders </span> | <span id='advisors'> Advisors</span></p>
+                        <div id="team" >
                             <%= render "/staticpages/foundingTeam" %>
+                            <%= render "/staticpages/advisors" %>
                         </div>
         
                 </div>
