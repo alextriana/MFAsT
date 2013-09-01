@@ -12,12 +12,14 @@
                 
                     <p class="standardText">
                         The MFAsT grew from the ideas and inventions of Dr. Jay Han and Dr. Gregorij Kurillo at UC Davis & UC Berkeley.  In 2007, they had transformed the state-of-the-art motion capture technology used in film and video-games into an accessible and portable tool to accurately measure a joint’s range-of-motion and function.  After the release of Microsoft’s Kinect, this “motion and function assessment tool” became more affordable and accessible.  Dr. Kourosh Parsapour, an associate of Dr. Han’s from UC Davis’ Center for Health & Technology, and Bill Spath formed 5plus with MFAsT as the flagship product to provide better physical therapy at a lower cost to both therapists and patients.   Each founder brings a unique set of skills and expertise united with a common goal to transform health care as the premier provider of digital health solutions for physical therapy.</p>
+                        
+                    <div style='margin-left:50px; margin-right:auto; padding-top:50px'>
+                        <%= image_tag('icons/StickmanGraphic.png', :style => 'background:#3e454c; padding-top:30px;', :align => 'middle')%>
+                    </div>
                     <br>
-                        <p class="standardText">
-                        Muscle strength is often rated on a scale of 0-5.  Reflexes are often graded by a series of + signs which are used to assess the health of the nervous system.  As 5+ has come to signify the best neuromusculoskeletal health in shorthand, 5plus strives to be the best in class company serving the needs of the payers, providers, and patients. </p>
                 </div>
 
-                <div class="two-third" style="width:50%" >
+                <div class="two-third" style="width:50%;" >
                     <video id="the-video" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="719" height="422" title="Midnight Sun" data-uid="a240e92d" preload="none" data-autoresize="fit" >
                         <source src="https://cdn.sublimevideo.net/vpa/ms_360p.mp4" />
                         <source src="https://cdn.sublimevideo.net/vpa/ms_720p.mp4" data-quality="hd" />
@@ -25,14 +27,20 @@
                         <source src="https://cdn.sublimevideo.net/vpa/ms_720p.webm" data-quality="hd" />
                     </video>
                   
+                     <br>
                     <br>
                     <br>
                     <br>
                     <br>
+                    <p class="standardText" style="padding-top:50px">
+                        Muscle strength is often rated on a scale of 0-5.  Reflexes are often graded by a series of + signs which are used to assess the health of the nervous system.  As 5+ has come to signify the best neuromusculoskeletal health in shorthand, 5plus strives to be the best in class company serving the needs of the payers, providers, and patients. </p>
+                        
+                    
                     <br>
                     <br>
                     <br>
-                    <br>
+
+                        
                     <br>
                     <br>
                 </div>
@@ -42,8 +50,17 @@
             <div class="portion-container">
                 
                 <div id="team1">
-                        
-                        <p class="header-white-medium" id='underline' style="color:black; padding:0px 0px 20px 0px; text-align:center"> <span id='founders'>The Team </span> | <span id='advisors'> The Advisors</span></p>
+             
+                            <div style="display:inline-block;margin-left:25% ">
+                            <div id='founders' style="background-image:url('assets/buttons/blue_button.png'); height:67px; width:260px; margin-top:20px; display:inline-block;">
+                            <p class="header-white-small" style="font-size:20pt; font-weight:bold; text-align:center; padding-top:10px">The Team</p>
+                          </div>
+                          <div id='advisors' style="background-image:url('assets/buttons/blue_button.png'); height:67px; width:260px; margin-top:20px; margin-bottom:20px; display:inline-block; margin-left:20px">
+                            <p class="header-white-small" style="font-size:20pt; font-weight:bold; text-align:center; padding-top:10px;;">The Advisors</p>
+                          </div>
+                        </div>
+
+
                         <div id="team" >
                             <%= render "/staticpages/foundingTeam" %>
                             <%= render "/staticpages/advisors" %>

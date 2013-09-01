@@ -1,3 +1,44 @@
+<div class="popup_box" id="popup_box">
+     <div id="form-popup">
+      <div style="float:left; width:420px; margin-left:30px">
+          <div class="header-white-large"><strong>Want to be a beta tester?</strong></h1>
+         </div> 
+         <br>
+       </div>
+      <div style = "float:right; width:50px;">
+        <a class="btn btn-medium btn-danger icon-remove"  id="beta-no"></a>
+      </div>
+      <%= form_for(@betaUser, :remote => true, url:{action:"create", controller:"beta_users"}) do |f| %>
+          <div class="span6">
+             <%= f.text_field :name, :class=>'subscribe', placeholder:"Your Name"%>
+              <%= f.text_field :email, placeholder:"Your Email", :class=>'subscribe' %>
+              <%= f.text_field :institution, placeholder:"Your Institution", :class=>'subscribe'%>
+             
+          
+          <div type="submit" id='submit-beta' style="background-image:url('assets/buttons/blue_button.png'); height:67px; width:260px;">
+              <p class="header-white-small" style="font-size:20pt; font-weight:bold; text-align:center; padding-top:10px">Get the beta</p>
+            </div>
+          <%end%>
+        </div>
+      </div>
+        <div id="popup-submission" style="display:none">
+          
+          <div style="float:left; width:420px; margin-left:30px">
+            <div class="header-white-large"><strong>Thanks for signing up! We'll be in contact soon.</strong></h1>
+            </div> 
+            <br>
+            <br>
+         <div id='close-beta' style="background-image:url('assets/buttons/red_button.png'); height:67px; width:260px;">
+              <p class="header-white-small" style="font-size:20pt; font-weight:bold; text-align:center; padding-top:10px">Return to site</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
 <div id="home" class=" color-1" style="padding-bottom:30px">
         <div class="row-fluid container" style="padding-top:30px; padding-bottom:0px" >
             
@@ -5,9 +46,10 @@
                 <p class="header-white-large" style="margin:0px 0; ">
                     Making physical therapy more efficient.
                 </p>
-                <p class="header-white-small" style="margin:20px 0;  ">•••</p>
+                <%= image_tag('icons/Kinect_Icon_NoBG.png', :style => 'margin: 25px 0 0 0')%>
+                
                 <p class="header-white-small" style="margin:20px 0;  ">
-                Kinect enabled digital health tools promise more physical therapy at a lower cost</p>
+                Kinect enabled digital health tools promise more physical therapy at a lower cost.</p>
                 
             </div>
         
@@ -15,17 +57,22 @@
               <div id="selling-points" style="padding:30px 0px 0px 5%;">
                   <div style="pull-left">
                        <div class="span5" >
-                          <ul class="big-list">
+                          <ul class="big-list" style="min-width:350px">
                             <li style="margin: 15px 0 15px 0;"><%= image_tag('icons/bolt.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>10x faster</li>
                             <li style="margin: 15px 0 15px 0"><%= image_tag('icons/group.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>See more patients</li>
-                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/clock.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>More patient time</li>
-                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/learn.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Easy to learn and affordable</li>
+                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/sling.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>More time for patients</li>
+                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/clock.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Easy to learn</li>
+                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/piggybank.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Affordable</li>
                             
                             <li style="margin: 15px 0 15px 0"><%= image_tag('icons/doctor.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Clinically Validated</li>
                             <li>
                             
                           
-                          <a href="#problem"class="scroll btn btn-large" style="background:#2185c5; height:30px; width:220px; margin-top:10px"><p class="header-white-small" style="font-size:20pt; font-weight:bold; background:#2185c5"><i class="icon-caret-down" style="margin:0 0 0 0 "></i> Learn more</p></a></li>
+                         <!--  <a href="#problem"class="scroll btn btn-large" style="background:#2185c5; height:30px; width:220px; margin-top:10px"><p class="header-white-small" style="font-size:20pt; font-weight:bold; background:#2185c5"><i class="icon-caret-down" style="margin:0 0 0 0 "></i> Learn more</p></a> -->
+
+                          <div style="background-image:url('assets/buttons/blue_button.png'); height:67px; width:260px; margin-top:20px;">
+                            <p class="header-white-small" style="font-size:20pt; font-weight:bold; text-align:center; padding-top:10px">Learn more</p>
+                          </div>
                       </div>
                   </div>
 

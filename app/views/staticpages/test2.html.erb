@@ -74,8 +74,8 @@
 
             font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
             color:white;
-            font-size: 33pt;
-            line-height: 37pt;
+            font-size: 35pt;
+            line-height: 39pt;
 
         }
 
@@ -83,8 +83,8 @@
 
             font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
             color:black;
-            font-size: 33pt;
-            line-height: 37pt;
+            font-size: 35pt;
+            line-height: 39pt;
 
         }
 
@@ -155,20 +155,42 @@
             padding: 0 1% 0 1%;
         }
 
-        #founders:hover{
-            text-decoration: underline;
-        }
-
-        #advisors:hover{
-            text-decoration: underline;
-        }
+      
 
         .active .brand-2 {
-  background-color: #4baad3 !important;
-}
-.brand-2:hover {
-  background-color: #4baad3 !important;
-}
+            background-color: #4baad3 !important;
+        }
+        .brand-2:hover {
+            background-color: #4baad3 !important;
+        }
+
+        .tm{
+            vertical-align: 55%;
+        line-height: 39px;
+        font-size:16px;
+        }
+
+        .popup_box { 
+            display:none; /* Hide the DIV */
+            position:fixed;  
+            _position:absolute; /* hack for internet explorer 6 */  
+            height:430px;  
+            width:500px;  
+            background:#3e454c;  
+            left: 400px;
+            top: 150px;
+            z-index:50; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+            margin-left: 15px;  
+            
+            /* additional features, can be omitted */
+            border:2px solid #cccccc;   
+            padding:15px;  
+            font-size:15px;  
+            -moz-box-shadow: 0 0 5px #cccccc;
+            -webkit-box-shadow: 0 0 5px #cccccc;
+            box-shadow: 0 0 5px #cccccc;
+          
+        }
 
     </style>
 
@@ -227,6 +249,45 @@
 
     $('#submit-feedback').click(function() {
     $('#feedback-confirmed').show();
+    });
+    function unloadPopupBox() { // TO Unload the Popupbox
+      $('#popup_box').fadeOut("slow");
+      $("#content").css({ // this is just for style   
+        "opacity": "1"  
+      }); 
+    }
+
+    
+    function loadPopupBox() { // To Load the Popupbox
+  
+      $('#popup_box').fadeIn("slow");
+      $("#content").css({ // this is just for style
+        "opacity": "0.3"  });
+      $('#form-popup').show();
+      
+     
+  }
+
+    $("#beta").click(function () {
+
+      loadPopupBox();
+    });
+
+    $('#beta-no').click(function(){
+      unloadPopupBox();
+    });
+    $('#close-beta').click(function(){
+  
+    $('#popup-submission').hide();
+    unloadPopupBox();
+
+  
+    });
+
+    $('#submit-beta').click(function() {
+      console.log('hit');
+      $('#form-popup').hide();
+      $('#popup-submission').show();
     });
 
 
