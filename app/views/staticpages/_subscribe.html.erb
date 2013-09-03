@@ -7,17 +7,19 @@
                 Keep up to date with 21st century healthcare
             </h1>
         </div>
-        <div class="span12" style="padding: 0 0 0 13%">
+        <div class="span12" style="padding: 0 0 0 10%">
             <%= form_for(@subscriber, :remote => true, url:{action:"create", controller:"subscribers"}) do |f| %>
              <%= f.text_field :email, placeholder:"name@example.com", :class => '', :style => 'height:40px; margin-left:10%; width:50%; border-radius:0px;' %>
              
-             <%= f.submit 'Subscribe', :class => 'btn subscribe', :id => 'submit-subscribe', :style=> "margin-bottom: 3px; background:#bf5f4d; width:20%" %>
+             <div class='btn-centered button2' type='submit' id='submit-subscribe' style= "margin-bottom: 3px;width:20%; padding:0 0 0 0; display:inline-block">
+                <p class="header-white-small button-text">Subscribe</p>
+              </div>
 
             <% end%>
         </div>
 
         <div class="inner-page row-fluid" id="subscribe-confirmed" style="display:none">
-        <div class="alert alert-success">
+        <div class="alert alert-success" style="text-align:center">
           <button type="button" class="close" data-dismiss="alert"></button>
           <strong>Thanks for subscribing!</strong> We'll keep you up to date on our latest and greatest.
         </div>

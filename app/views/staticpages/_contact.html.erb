@@ -30,11 +30,15 @@
                             <%= f.text_field :email, placeholder:"name@example.com", :style=> 'width:100%; display:block; border-radius: 0px;' %>
                             
                            
-                            <button type="submit" id="submit-feedback" class="btn btn-centered splash-4">Contact Us</button>
+                            
+
+                             <div class='btn-centered button' type='submit' id='submit-feedback'>
+                            <p class="header-white-small button-text">Contact Us</p>
+                          </div>
 
                             <% end %>
                             <div class="inner-page row-fluid" id="feedback-confirmed" style="display:none">
-                              <div class="alert alert-success">
+                              <div class="alert alert-success" style="text-align:center">
                                       <strong>Thanks for your input!</strong> We appreciate the feedback.
                               </div>
                             </div>
