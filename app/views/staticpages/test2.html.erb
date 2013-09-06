@@ -280,6 +280,7 @@
     });
     function unloadPopupBox() { // TO Unload the Popupbox
       $('#popup_box').fadeOut("slow");
+       $('#popup_box').fadeOut("slow");
       $("#content").css({ // this is just for style   
         "opacity": "1"  
       }); 
@@ -289,9 +290,32 @@
     function loadPopupBox() { // To Load the Popupbox
   
       $('#popup_box').fadeIn("slow");
+      $('#popup_box_pub').fadeOut("slow");
       $("#content").css({ // this is just for style
         "opacity": "0.3"  });
-      $('#form-popup').show();
+      
+      
+     
+  }
+
+
+
+  function loadPopupBoxPublications() { // To Load the Popupbox
+  
+      $('#popup_box_pub').fadeIn("slow");
+      $("#content").css({ // this is just for style
+        "opacity": "0.3"  });
+      
+      
+     
+  }
+
+  function unloadPopupBoxPublications() { // To Load the Popupbox
+  
+      $('#popup_box_pub').fadeOut("slow");
+      $("#content").css({ // this is just for style
+        "opacity": "0.3"  });
+      
       
      
   }
@@ -299,10 +323,20 @@
     $("#beta").click(function () {
 
       loadPopupBox();
+      $('#form-popup').show();
+    });
+
+    $("#publications").click(function () {
+
+      loadPopupBoxPublications();
+      //$('#publication-popup').show();
     });
 
     $('#beta-no').click(function(){
       unloadPopupBox();
+    });
+    $('#pub-no').click(function(){
+      unloadPopupBoxPublications();
     });
     $('#close-beta').click(function(){
   
