@@ -1,0 +1,179 @@
+        .custom-container{
+            margin-right:120px; 
+            margin-left:8%
+        }
+
+
+        .black {
+            color:black;
+        }
+
+        .white {
+            color:white;
+        }
+
+        .header-small{
+            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+            font-size: 20pt;
+            line-height: 25pt;
+        }
+
+        .header-medium{
+            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+            font-size: 25pt;
+            line-height: 30pt;
+        }
+
+        .header-large {
+            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+            font-size: 35pt;
+            line-height: 39pt;
+
+        }
+        
+
+        .standardText{
+            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+            font-size: 14pt;
+            line-height: 18pt;
+            text-align:normal
+        }
+
+        .black {
+            color:black;
+        }
+
+        .rory-nav-text {
+            padding-top:15px; 
+            font-size:13pt;
+        }
+
+        .screen-span {
+            max-width:1500px;
+        }
+
+        .splash-1 {
+            background: #7ecefd;
+            
+
+        }
+
+        .splash-2 {
+            background: #fff6e5;
+            
+          
+        }
+
+        .splash-3 {
+            background: #2185c5;
+          
+        }
+
+        .splash-4 {
+            background: #ff7f66;
+            
+        }
+
+         .splash-5 {
+            background:#3e454c;
+           
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .portion-container{
+            width:85%;
+            padding: 20px 2% 20px 10%;
+            min-width: 1200px;
+            max-width: 1300px
+        }
+
+        .third {
+            width:30%;
+            display:inline-block;
+            padding: 0 1% 0 1%;
+        }
+
+        .two-third {
+            width:60%;
+            display:inline-block;
+            padding: 0 1% 0 1%;
+        }
+
+        .half {
+            width:42%;
+            display:inline-block;
+            padding: 0 1% 0 1%;
+        }
+
+      
+
+        .active .brand-2 {
+            background-color: #4baad3 !important;
+        }
+        .brand-2:hover {
+            background-color: #4baad3 !important;
+        }
+
+        .tm{
+        vertical-align: 55%;
+        line-height: 39px;
+        font-size:16px;
+        }
+
+        .popup_box { 
+            display:none; /* Hide the DIV */
+            position:fixed;  
+            _position:absolute; /* hack for internet explorer 6 */  
+            height:430px;  
+            width:500px;  
+            background:#3e454c;  
+            left: 400px;
+            top: 150px;
+            z-index:50; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+            margin-left: 15px;  
+            
+            /* additional features, can be omitted */
+            border:2px solid #cccccc;   
+            padding:5px;  
+            font-size:15px;  
+            -moz-box-shadow: 0 0 5px #cccccc;
+            -webkit-box-shadow: 0 0 5px #cccccc;
+            box-shadow: 0 0 5px #cccccc;
+          
+        }
+
+        .blue-button {
+            background-image:url('buttons/blue_button.png'); 
+        }
+
+        .orange-button{
+             background-image:url('buttons/red_button.png'); 
+        }
+
+        .button {
+            
+            height:67px; 
+            width:260px; 
+            margin-top:20px
+        }
+
+
+        .button-text {
+            font-size:20pt; 
+            font-weight:bold; 
+            text-align:center; 
+            padding-top:10px
+        }
+        
+        .blue-button:hover {
+            background-image:url('buttons/red_button.png')
+        } 
+        .orange-button:hover {
+            background-image:url('buttons/blue_button.png')
+        }   
+        .pop-list-item:hover {
+            color:#4baad3;
+        }

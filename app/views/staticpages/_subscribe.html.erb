@@ -3,7 +3,7 @@
         </br>
         <div class="span11" style="padding: 0 0 0 13%">
 
-            <h1 class="header-white" style="margin-top:0px; text-align:center">
+            <h1 class="header white" style="margin-top:0px; text-align:center">
                 Keep up to date with 21st century healthcare.
             </h1>
         </div>
@@ -11,8 +11,8 @@
             <%= form_for(@subscriber, :remote => true, url:{action:"create", controller:"subscribers"}) do |f| %>
              <%= f.text_field :email, placeholder:"name@example.com", :class => '', :style => 'height:40px; margin-left:10%; width:50%; border-radius:0px;' %>
              
-             <div class='btn-centered button2' type='submit' id='submit-subscribe' style= "margin-bottom: 3px;width:20%; padding:0 0 0 0; display:inline-block">
-                <p class="header-white-small button-text">Subscribe</p>
+             <div class='btn-centered button orange-button' type='submit' id='submit-subscribe' style= "margin-bottom: 3px;width:20%; padding:0 0 0 0; display:inline-block">
+                <p class="header-small white button-text">Subscribe</p>
               </div>
 
             <% end%>

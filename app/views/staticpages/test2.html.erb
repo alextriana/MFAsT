@@ -11,222 +11,13 @@
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
+
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <link href='assets/stylesheets/cutom.css' rel='stylesheet' type='text/css'>
+
  <style> 
 
-   
-        .header-black {
 
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-
-            color:black;
-        }
-
-        .header-white {
-
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            color:white;
-        }
-
-        .header-white-small {
-
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            color:white;
-            font-size: 20pt;
-            line-height: 25pt;
-
-        }
-
-        .header-black-small {
-
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            color:black;
-            font-size: 20pt;
-            line-height: 25pt;
-
-        }
-
-
-        .custom-container{
-            margin-right:120px; 
-            margin-left:8%
-        }
-
-        .header-white-medium {
-
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            color:white;
-            font-size: 25pt;
-            line-height: 30pt;
-
-        }
-
-        .header-black-medium {
-
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            color:black;
-            font-size: 25pt;
-            line-height: 30pt;
-
-        }
-
-        .header-white-large {
-
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            color:white;
-            font-size: 35pt;
-            line-height: 39pt;
-
-        }
-
-        .header-black-large {
-
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            color:black;
-            font-size: 35pt;
-            line-height: 39pt;
-
-        }
-
-        .standardText{
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            font-size: 14pt;
-            line-height: 18pt;
-            text-align:normal
-        }
-
-        .black {
-            color:black;
-        }
-
-        .rory-nav-text {
-            padding-top:15px; 
-            font-size:13pt;
-        }
-
-        .splash-1 {
-            background: #7ecefd;
-            max-width:1500px;
-
-        }
-
-        .splash-2 {
-            background: #fff6e5;
-            max-width:1500px;
-          
-        }
-
-        .splash-3 {
-            background: #2185c5;
-            max-width:1500px;
-        }
-
-        .splash-4 {
-            background: #ff7f66;
-            max-width:1500px;
-        }
-
-         .splash-5 {
-            background:#3e454c;
-            max-width:1500px;
-        }
-
-        .center-text {
-            text-align: center;
-        }
-
-        .portion-container{
-            width:85%;
-            padding: 20px 2% 20px 10%;
-            min-width: 1200px;
-            max-width: 1300px
-        }
-
-        .third {
-            width:30%;
-            display:inline-block;
-            padding: 0 1% 0 1%;
-        }
-
-        .two-third {
-            width:60%;
-            display:inline-block;
-            padding: 0 1% 0 1%;
-        }
-
-        .half {
-            width:42%;
-            display:inline-block;
-            padding: 0 1% 0 1%;
-        }
-
-      
-
-        .active .brand-2 {
-            background-color: #4baad3 !important;
-        }
-        .brand-2:hover {
-            background-color: #4baad3 !important;
-        }
-
-        .tm{
-        vertical-align: 55%;
-        line-height: 39px;
-        font-size:16px;
-        }
-
-        .popup_box { 
-            display:none; /* Hide the DIV */
-            position:fixed;  
-            _position:absolute; /* hack for internet explorer 6 */  
-            height:430px;  
-            width:500px;  
-            background:#3e454c;  
-            left: 400px;
-            top: 150px;
-            z-index:50; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
-            margin-left: 15px;  
-            
-            /* additional features, can be omitted */
-            border:2px solid #cccccc;   
-            padding:5px;  
-            font-size:15px;  
-            -moz-box-shadow: 0 0 5px #cccccc;
-            -webkit-box-shadow: 0 0 5px #cccccc;
-            box-shadow: 0 0 5px #cccccc;
-          
-        }
-
-        .button {
-            background-image:url('assets/buttons/blue_button.png'); 
-            height:67px; 
-            width:260px; 
-            margin-top:20px
-        }
-
-        .button2{
-            background-image:url('assets/buttons/red_button.png'); 
-            height:67px; 
-            width:260px; 
-            margin-top:20px
-        }
-
-        .button-text {
-            font-size:20pt; 
-            font-weight:bold; 
-            text-align:center; 
-            padding-top:10px
-        }
-        
-        .button:hover {
-            background-image:url('assets/buttons/red_button.png')
-        } 
-        .button2:hover {
-            background-image:url('assets/buttons/blue_button.png')
-        }   
-        .pop-list-item:hover {
-            color:#4baad3;
-        }
 
     </style>
 
@@ -251,13 +42,14 @@
 
 </head>
 
+
  <%= render "/staticpages/navbar" %>
 
 <body>
     <%= render "/staticpages/kour" %>
     <%= render "/staticpages/part2" %>
     <%= render "/staticpages/part3" %>
-    <%= render "/staticpages/part4" %>
+    <!--part4 -->
     <%= render "/staticpages/part5" %>
     <%= render "/staticpages/subscribe" %>
     <%= render "/staticpages/contact" %>
