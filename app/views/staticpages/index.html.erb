@@ -1,459 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>5plus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Twitter bootstrap theme">
-    <meta name="author" content="prettystrap">
-    <style>
-        .popup_box { 
-      display:none; /* Hide the DIV */
-      position:fixed;  
-      _position:absolute; /* hack for internet explorer 6 */  
-      height:430px;  
-      width:500px;  
-      background:#7f8c8d;  
-      left: 400px;
-      top: 150px;
-      z-index:50; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
-      margin-left: 15px;  
-      
-      /* additional features, can be omitted */
-      border:2px solid #cccccc;   
-      padding:15px;  
-      font-size:15px;  
-      -moz-box-shadow: 0 0 5px #cccccc;
-      -webkit-box-shadow: 0 0 5px #cccccc;
-      box-shadow: 0 0 5px #cccccc;
-      
-    }
-
-    h1:hover {text-decoration:underline}
-    </style>
-    <link href="http://vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
-    <script src="http://vjs.zencdn.net/4.1/video.js"></script>
-  
+    <title>FivePlus</title>
     
+
     <script type="text/javascript" src="//cdn.sublimevideo.net/js/eunrkkbu.js"></script>
 
-     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
-    
-    <!-- Le styles -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-      </script>
-    <![endif]-->
-    <!-- Le fav  -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <link href='assets/stylesheets/cutom.css' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
+ <style> 
+
+
+
+    </style>
+
+
+     <script>
     if (typeof jQuery == 'undefined') {
       document.write(unescape("%3Cscript src='assets/js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
     }
 
     </script>
 
-    <!--Has to be in head, to lazy load images.
-    Minimize in production. -->
-
-
-
     <script>
         // History, and back button
     $(function() {
     jQuery.history.listen()
       $('#nav .nav .scroll').click(function() {
-      $.history.push('index.html' + $(this).attr('href')); 
+      $.history.push('test.html' + $(this).attr('href')); 
       });
     });
     </script>
-  </head>
 
 
-  <div id="outter">
-    <div class="popup_box" id="popup_box">
-     <div id="form-popup">
-      <div style="float:left; width:420px; margin-left:30px">
-          <h1 id = "text" style="color:black" ><strong>Want to be a beta tester?</strong></h1>
-         </div> 
-      <div style = "float:right; width:50px;">
-        <a class="btn btn-medium btn-danger icon-remove"  id="beta-no"></a>
-      </div>
-      <%= form_for(@betaUser, :remote => true, url:{action:"create", controller:"beta_users"}) do |f| %>
-          <div class="span6">
-             <%= f.text_field :name, :class=>'subscribe', placeholder:"Your Name"%>
-              <%= f.text_field :email, placeholder:"Your Email", :class=>'subscribe' %>
-              <%= f.text_field :institution, placeholder:"Your Institution", :class=>'subscribe'%>
-             
-          </div>
-          <div class="span2">
-            <button type="submit"  id="submit-beta" class="btn pull-right subscribe">Get the Beta!</button>
-            
-          </div>
-          <%end%>
-        </div>
-        <div id="popup-submission" style="display:none">
-          <h1 id = "text" style="color:black" ><strong>Thanks for signing up! We will be in contact shortly.</strong></h1>
-         <button  id="close-beta" class="btn btn-large btn-success subscribe">Return to site</button>
-        </div>
-      </div>
- 
+</head>
 
 
-    <div id="content">
-  <!-- activate scrollspy -->
-  <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
+ <%= render "/staticpages/navbar" %>
 
-       <!-- Nav button -->
-      <a id="toggle"  class="closed">
-        <i class="icon-reorder"></i>
-      </a>
+<body>
+    <%= render "/staticpages/kour" %>
+    <%= render "/staticpages/part2" %>
+    <%= render "/staticpages/part3" %>
+    <%= render "/staticpages/part4" %>
+    <%= render "/staticpages/part5" %>
+    <%= render "/staticpages/subscribe" %>
+    <%= render "/staticpages/contact" %>
+    <%= render "/staticpages/contributors" %>
 
-      <!-- Navigation -->
-      <header class="navbar navbar-fixed-top">
-        <div class="inner-page">
-          <h1 class="logo"><%=link_to(image_tag('5plus-logo-long-transparent.png'), "#home")%> </h1>
-            <div id="nav" >
-              <ul class="nav">
-                <li class="active"  ><a title="Home page" class="scroll brand-1" id="hbut" href="#home" style="height:50px">Home</a></li>
-                <li><a title="Check out our awesome services" href="#problem" style="height:50px">The Problem</a></li>
-                <li><a title="The Solution" href="#solution" class="scroll brand-3" style="height:50px">The Solution</a></li>
-                <li><a title="Meet Us" href="#about" class="scroll brand-2" style="height:50px">Our Team</a></li>
-
-                <li><a title="Get in touch!" href="#contact" class="scroll brand-2" style="height:50px">Contact</a></li>
-                <li><a title="Get in touch!" id="beta" class="scroll brand-2" style="height:50px">BETA</a></li>
-
-              </ul>
-            </div>
-        </div> 
-      </header>
-
-
-      <!-- Home Page -->
-      <div id="home" class="page color-1">
-        <div class="inner-page">
-          <h2 class="page-headline large">Making physical therapy more efficient.</h2>
-        </div>  
-        <div class="row-fluid inner-page">
-          <div class="span7 pull-right lazy-container">
-           <!-- video player here -->
-
-           <div class="span7 demo-video">
-          <!--[if !IE]> -->
-            <video id="example_video_1" class="video-js vjs-default-skin" style="z-index:0"
-                controls preload="auto" width="640" height="264"
-                poster="http://video-js.zencoder.com/oceans-clip.png"
-                data-setup='{"example_option":true}'>
-               <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
-               <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
-               <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
-              </video>
-          <!-- <![endif]-->
-
-          <!--[if IE]>
-            <video class="video-js" controls
-              preload="auto" width="620" height="256" poster="http://video-js.zencoder.com/oceans-clip.jpg" data-setup="{}">
-              <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4'/>
-              <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'/>
-            </video>
-          <![endif]-->
-        </div>
-
-          </div>
-          <div class="span5 pull-left">
-            <ul class="big-list">
-              <li><i class="icon-bolt"></i>10x faster</li>
-              <li><i class="icon-group"></i>See more patients</li>
-              <li><i class="icon-time"></i>More treatment time</li>
-              <li><i class="icon-credit-card"></i>Easy to learn & affordable</li><br>
-              <li><i class="icon-user-md"></i>Clinically validated</li>
-            </ul>
-            <br />
-            <a href="#problem" title="Check out more freatures!" class="scroll btn btn-centered"><i class="icon-caret-down"></i> Learn more</a>
-          </div>
-        </div>
-      </div>
-
-        <div class="sign-up color-2 visible-desktop">
-        <div class="row-fluid inner-page">
-          <div class="span12">
-            <h3 style="text-align:center">Kinect-enabled digital health tools provide more physical therapy at a lower cost.</h4>
-          </div>
-        </div>
-      </div>
-
-      <div id="problem" class="page color-4">
-        <div class="inner-page">
-          <h2 class="page-headline">The Problem</h2>
-        </div>
-
-        <div class="inner-page row-fluid">
-          <ul class="features list-inline">
-            <li>
-              <h3><i class="icon-group"></i> Too many patients. Too few physical therapists.</h3>
-              <p>2004:<br>Outpatients: 3.7 million <br>Physical Therapists: 148,000</p>
-               <p>2013:<br>Outpatients: 5.4 million <br>Physical Therapists: 158,000</p>
-            </li>
-            <li>
-              <%=image_tag('gmeter.jpg', :class => 'offset1') %> <%=image_tag('penpaper.jpg')%> <%=image_tag('comp.jpg')%>
-              <h3>Current process is outdated.</h3>
-              <p>The goniometer is an outdated medical tool. It inhibits the speed of data collection, as 
-                each joint's range of motion must be manually measured.
-              </p>
-              <p>It can take 30 minutes to collect *full body range of motion data*.
-            </li>
-            <li>
-               <%=image_tag('paperwork.jpg', :class=>'offset2')%> <%=image_tag('moneybag.jpg') %>  <%=image_tag('comp.jpg')%>
-              <h3> Coding, Billing, and Reporting.</h3>
-              <p>In 2013, CMS mandated quantified measurement and functional status reports for payment. </p>
-              <p>Medical records and insurance forms quickly make for an inefficient and labor intensive distribution.</p>
-            </li>
-            </ul>
-        </div>
-                         
-        <div class="row-fluid inner-page">
-          <div class="span6 lazy-container">
-             <%= image_tag('tmd-big.jpg', :class => 'figurette lazy')%>
-          </div>
-          <div class="span6">           
-            <h3>It's time for a change.</h3>
-            <p class="lead">Our clinical solutions have been invented and validated by experts in physical medicine & rehabilitation, telehealth, computer and electrical engineering, and orthopedic medical devices.</p>   
-          </div>
-        </div>
+    <%= render "staticpages/footer" %>
 
 
 
-         <div id="solution" class="page color-3">
-          <div class="inner-page">
-            <h2 class="page-headline">Introducing MFAsT</h2>
-            <h4 class="page-headline"> Motion & Function Assestment Tool</h4>
-          </div>
-
-        <!-- Vectors -->
-        <div class="row-fluid inner-page">
-
-            <div class="span6">
-            <h3>Efficient and clinically validated. </h3>
-            <p class="lead">Range of motion evaluation automatically correlates to activities of daily life (ADL). </p>
-            <p class="lead">Diagnostic software delivers an intuitive 3D graph of patients’ function and improvement to make assessments more engaging and therapy more compelling.</p>
-          </div>
-          <div class="span6 lazy-container inner-page">
-            <video id="the-video" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="640" height="360" title="Midnight Sun" data-uid="a240e92d" preload="none" >
-  <source src="https://cdn.sublimevideo.net/vpa/ms_360p.mp4" />
-  <source src="https://cdn.sublimevideo.net/vpa/ms_720p.mp4" data-quality="hd" />
-  <source src="https://cdn.sublimevideo.net/vpa/ms_360p.webm" />
-  <source src="https://cdn.sublimevideo.net/vpa/ms_720p.webm" data-quality="hd" />
-</video>
-          
-          </div>
-        </div>
-        
-
-        <hr>
-
-
-        <div class="inner-page row-fluid" id="features">
-          <ul class="features list-inline">
-            <li>
-              <h3><i class="icon-bolt"></i> Fast.</h3>
-              <p class="lead">20+ minutes to see more patients or focus on patient care.
-              
-            </li>
-            <li>
-              <h3><i class="icon-bar-chart"></i> Less Paperwork,Seamless, Streamlined
-              </h3>
-              <p>Patients and therapists interact with clinical data like never before.</p>
-              <p>Point of care data autopopulates billing, insurance forms, progress notes, and referal letters.</p>
-            </li>
-            <li>
-              <%=image_tag('graph1.png', :class=>'offset2')%> <%=image_tag('graph2.png') %>  <%=image_tag('graph3.png')%>
-              <h3>Engaging.</h3>   
-              <p>Interact with collected data like never before. See visual representations of a patient's
-                usuable workspace.
-              </p>
-              <p>Easily identify the practical implications of the data collected.</p>
-            </li>
-            </ul>
-        </div>
-
-
-        <div class="clients color-1">
-          <div class="inner-page row-fluid">
-              <h2 class="page-headline">Want to learn more? Check out a complete technological breakdown of the MFAsT <%= link_to('here.', 'http://google.com') %></h2>
-          </div>
-          
-
-      </div> <!-- /Assets page -->
-      <!-- About page -->
-      <div id="about" class="page color-4">
-        <div class="inner-page">
-          <h2 class="page-headline">Who are we and how it all got started. The 5plus story.</h2>
-        </div>
-        <div class="row-fluid inner-page">
-          <div class="span6  lazy-container">
-              <img class="figurette lazy" src="assets/img/pixel.png" data-original="assets/img/green-office.png" alt="Our workspace" />
-          </div>
-          <div class="span6">
-            <h3>Zonbi tattered for solum.</h3>
-            <p class="lead">The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro.</p>
-            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>
-          </div>
-        </div>
-
-        <hr>
-
-
-
-        <div class="row-fluid inner-page">
-          <div id="team1">
-            <h1 id="showfounders">Founding Team</h1>
-            <div id="founders"a >
-              <%= render "/staticpages/foundingTeam" %>
-            </div>
-          </div>
-          <div id="team3">
-            <h1 id="showadvisors">Advisors</h1>
-            <div id="advisors" style="display:none" >
-              <%= render "/staticpages/advisors" %>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-        
-
-        
-        
-        
-        
-        <!-- Newsletter -->
-        
-      <div class="newsletter color-1" >
-        <div class="inner-page">
-          
-          <h2 class="page-headline">Keep up with 21st century healthcare</h2>
-        </div>
-        <div class="inner-page row-fluid">
-          <div class="span4">
-            <h4><strong>Subscribe</strong> to get our latest news</h4>
-          </div>
-          <%= form_for(@subscriber, :remote => true, url:{action:"create", controller:"subscribers"}) do |f| %>
-          <div class="span6">
-             <%= f.text_field :email, placeholder:"name@example.com", :class => "subscribe" %>
-            
-          </div>
-          <div class="span2">
-            <button type="submit"  id="submit-subscribe" class="btn pull-right subscribe">Subscribe</button>
-            
-          </div>
-          <%end%>
-        </div>
-      <br>
-      <div class="inner-page row-fluid" id="subscribe-confirmed" style="display:none">
-        <div class="alert alert-success">
-          <button type="button" class="close" data-dismiss="alert"></button>
-          <strong>Thanks for subscribing!</strong> We'll keep you up to date on our latest and greatest.
-        </div>
-      </div>
-    </div>
-
-      
-        
-
-        
-        <div id='inputform'>
-          <%= form_for(@feedback, :remote => true, url:{action:"create", controller:"feedbacks"}) do |f| %>
-          <div id="contact" class="page color-3">
-
-
-            <div class="inner-page">
-            
-              <h2 class="page-headline">Stay in Touch. Give us feedback.</h2>
-            </div>
-            <div class="row-fluid inner-page contact">
-              <div class="span6">
-                <h3>What's on your mind?</h3>
-                <%= f.text_area :input, placeholder:"Let us know what you like or dislike. Ask us questions. How can we make your life easier in the clinic?", rows:6   %>
-                <%= f.text_field :name, placeholder:"Name" %>
-                <%= f.text_field :email, placeholder:"name@example.com" %>
-                
-               
-                <button type="submit" id="submit-feedback" class="btn btn-centered">Contact Us</button>
-                <div class="inner-page row-fluid" id="feedback-confirmed" style="display:none">
-                  <div class="alert alert-success">
-                          <strong>Thanks for your input!</strong> We appreciate the feedback.
-                  </div>
-                </div>
-              </div>
-
-              <div class="span6">
-                <div class="btn-container centered lazy-container text-center">
-                  <%=image_tag('transparent.gif')%>
-                </div>
-              </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-
-
-
-       <div class="newsletter color-1" >
-        <div class="inner-page">
-          
-          <h4 class="page-headline">5plus would like to thank the following organizations for their support" and we should have the logos and links to CITRIS, Foundry@CITRIS, UC Davis, UC Berkeley, CTRC, Electronic Arts, Microsoft, Go2Care, Knobbe Marten, http://citris-uc.org/, (Center for Information Technology Research in the Interest of Society: a multi-UC campus research center that brings together engineering and social scientists from UC Berkeley, UC Merced, and UC Santa Cruz with medical researchers from UC Davis Medical Center)</h4>
-          <br>
-        </div>
-      </div>
-
-     
-       <footer class="page color-5">
-        <div class="inner-page row-fluid">
-          <div class="span6 social">
-            <a href="http://www.twitter.com/5plustherapy"><i class="icon-twitter"></i></a>   
-            <a href="https://www.facebook.com/5plustherapy"><i class="icon-facebook-sign"></i></a>
-          </div>
-          <div class="span6 text-right copyright">
-            &copy; 2013 5plus | all rights reserved |  <a href="#top"   title="Got to top" class="scroll">To top <i class="icon-caret-up"></i></a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </div>
-</div>
-</div>
-
+</body>
 <script>
-  $('#submit-beta').click(function() {
-      console.log('hit');
-      $('#form-popup').hide();
-      $('#popup-submission').show();
-    });
-
-  $('#submit-subscribe').click(function() {
+    $('#submit-subscribe').click(function() {
     $('#subscribe-confirmed').show();
     });
 
-$('#submit-feedback').click(function() {
-    $('#feedback-confirmed').show();
+    $('#advisors').click(function() {
+    $('#founders-block').slideUp();
+    $('#advisor-block').slideDown();
     });
 
-$('#close-beta').click(function(){
-  
-  $('#popup-submission').hide();
-  unloadPopupBox();
+    $('#founders').click(function() {
+    $('#advisor-block').slideUp();
+    $('#founders-block').slideDown();
+    });
 
-  
-});
-  function unloadPopupBox() { // TO Unload the Popupbox
+    $('#submit-feedback').click(function() {
+    $('#feedback-confirmed').show();
+    });
+    function unloadPopupBox() { // TO Unload the Popupbox
       $('#popup_box').fadeOut("slow");
+       $('#popup_box').fadeOut("slow");
       $("#content").css({ // this is just for style   
         "opacity": "1"  
       }); 
@@ -463,9 +90,32 @@ $('#close-beta').click(function(){
     function loadPopupBox() { // To Load the Popupbox
   
       $('#popup_box').fadeIn("slow");
+      $('#popup_box_pub').fadeOut("slow");
       $("#content").css({ // this is just for style
         "opacity": "0.3"  });
-      $('#form-popup').show();
+      
+      
+     
+  }
+
+
+
+  function loadPopupBoxPublications() { // To Load the Popupbox
+  
+      $('#popup_box_pub').fadeIn("slow");
+      $("#content").css({ // this is just for style
+        "opacity": "0.3"  });
+      
+      
+     
+  }
+
+  function unloadPopupBoxPublications() { // To Load the Popupbox
+  
+      $('#popup_box_pub').fadeOut("slow");
+      $("#content").css({ // this is just for style
+        "opacity": "0.3"  });
+      
       
      
   }
@@ -473,45 +123,36 @@ $('#close-beta').click(function(){
     $("#beta").click(function () {
 
       loadPopupBox();
+      $('#form-popup').show();
+    });
+
+    $("#publications").click(function () {
+
+      loadPopupBoxPublications();
+      //$('#publication-popup').show();
     });
 
     $('#beta-no').click(function(){
       unloadPopupBox();
     });
-
-    var shown="#founders";
-
-    $("#showfounders").click(function () {
-      // $(shown).fadeOut('slow', function() {
-      // });
-      $('#founders').fadeIn('slow', function() {
-    // Animation complete.
-      shown="#founders";
-      });
+    $('#pub-no').click(function(){
+      unloadPopupBoxPublications();
     });
-
-    $("#showadvisors").click(function () {
-      // $(shown).fadeOut('slow', function() {
-      // });
-      $('#advisors').fadeIn('slow', function() {
-    // Animation complete.
-      shown="#advisors";
-      });
-    });
-
-    $("#showclinical-advisors").click(function () {
-      // $(shown).fadeOut('slow', function() {
-      // });
-      $('#clinical-advisors').fadeIn('slow', function() {
-    // Animation complete.
-      shown="#clinical-advisors";
-      });
-    });
-
-
-
-
-    
+    $('#close-beta').click(function(){
   
+    $('#popup-submission').hide();
+    unloadPopupBox();
+
+  
+    });
+
+    $('#submit-beta').click(function() {
+      console.log('hit');
+      $('#form-popup').hide();
+      $('#popup-submission').show();
+    });
+
+
 
 </script>
+    
