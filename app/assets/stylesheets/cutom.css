@@ -49,7 +49,7 @@
         }
 
         .screen-span {
-            max-width:1500px;
+            
         }
 
         .splash-1 {
@@ -85,9 +85,9 @@
 
         .portion-container{
             width:85%;
-            padding: 20px 2% 20px 10%;
-            min-width: 1200px;
-            max-width: 1300px
+            padding: 20px 1% 20px 10%;
+            min-width: 900px;
+            
         }
 
         .third {
