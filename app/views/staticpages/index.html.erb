@@ -12,32 +12,8 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
 
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script type="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <link href='assets/stylesheets/cutom.css' rel='stylesheet' type='text/css'>
-
- <style> 
-
-
-
-    </style>
-
-
-     <script>
-    if (typeof jQuery == 'undefined') {
-      document.write(unescape("%3Cscript src='assets/js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
-    }
-
-    </script>
-
-    <script>
-        // History, and back button
-    $(function() {
-    jQuery.history.listen()
-      $('#nav .nav .scroll').click(function() {
-      $.history.push('test.html' + $(this).attr('href')); 
-      });
-    });
-    </script>
 
 
 </head>
@@ -61,6 +37,9 @@
 
 </body>
 <script>
+
+
+
     $('#submit-subscribe').click(function() {
     $('#subscribe-confirmed').show();
     });
@@ -151,6 +130,8 @@
       $('#form-popup').hide();
       $('#popup-submission').show();
     });
+
+
 
 
 
