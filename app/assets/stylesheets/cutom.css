@@ -76,6 +76,7 @@
 
          .splash-5 {
             background:#3e454c;
+
            
         }
 
@@ -184,7 +185,7 @@
             /* Styles */
 
         .splash-2 {
-            min-width: 1150px
+            background-color: #ffffff;
         }
     }
 }
