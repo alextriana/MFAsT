@@ -178,24 +178,5 @@
         .pop-list-item:hover {
             color:#4baad3;
         }
-
-        @media only screen 
-        and (min-device-width : 320px) 
-        and (max-device-width : 480px) {
-            /* Styles */
-
-        .splash-2 {
-            min-width:1350px;
-            background: #fff6e5;
-        }
-
-        
-
-        .splash-2 {
-            min-width:1350px;
-            background: #fff6e5;
-        }
-
-
-    }
+ 
 }
