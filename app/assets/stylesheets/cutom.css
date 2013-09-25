@@ -185,7 +185,9 @@
             /* Styles */
 
         .splash-2 {
-            background-color: #ffffff;
+            min-width: 1150px
         }
+
+        
     }
 }
