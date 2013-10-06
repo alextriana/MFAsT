@@ -86,8 +86,10 @@
 
         .portion-container{
             width:85%;
-            padding: 20px 1% 20px 10%;
+            padding: 20px 1% 20px 10px;
             min-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
             
         }
 
