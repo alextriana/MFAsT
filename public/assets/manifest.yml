@@ -31,14 +31,17 @@ default/superman.jpg: default/superman-04e05a4af0b62d2a05fa4b3db1c5f72e.jpg
 default/two-phones.png: default/two-phones-a4e558c3e98a9985f02743237f9cd1bc.png
 default/video.png: default/video-02efca8223fa77567ce5ba44405eee74.png
 default/video@2x.png: default/video@2x-4f4b1d93454b35d992a954b38a7df487.png
+favicon.ico: favicon-73dc9ff94de178cc7b0b494de6274a77.ico
 filler.png: filler-862fbb209f9c4b81805191c6806c1f2f.png
 headshots/Bill.jpg: headshots/Bill-a0f03caf405bfebb9565c44d8f8be934.jpg
+headshots/Quan.jpg: headshots/Quan-e159a3da8281742a580353fe1851f8a4.jpg
 headshots/cramer.png: headshots/cramer-abe73d931a02c7e427722775870ddc53.png
 headshots/gregorij.jpg: headshots/gregorij-c49c93cff733f308edb4aec5c473dd60.jpg
 headshots/gregorij.png: headshots/gregorij-f72590646968968271843575e9f23810.png
 headshots/jay.png: headshots/jay-70989f1e8dad8dff80140b12bf247b62.png
 headshots/kathy.png: headshots/kathy-94fb22da6d52ddf38ce17851e56cceef.png
 headshots/kourosh.png: headshots/kourosh-f224037a87a5378e00fde30db5b282f4.png
+headshots/quan.png: headshots/quan-6c96423b5701507d5f4ecab6d5ec51b0.png
 headshots/ruzena.jpg: headshots/ruzena-b748b4a019dab686dea2fb5d3b0667fe.jpg
 headshots/ruzena.png: headshots/ruzena-413e21d24125afa683da524be4bd5028.png
 headshots/tammy.png: headshots/tammy-8eb5cd0fd8b78095b8d244c75309501b.png
@@ -77,6 +80,7 @@ icons/paperwork.jpg: icons/paperwork-1145d34b3f5d777d0d075d67ea1c6e82.jpg
 icons/penpaper.jpg: icons/penpaper-9177527922f0d78bb69498d222018a4c.jpg
 icons/piggybank.png: icons/piggybank-dbf67742fa59dcab54387dad353e4d72.png
 icons/sling.png: icons/sling-885a9fe6b1e2c556151529b2b515e42e.png
+icons/target-14.png: icons/target-14-dfcb39fe6944db9da1963302784d51fd.png
 logos/5plus-logo-long-transparent.png: logos/5plus-logo-long-transparent-d182bcd91b8baf9ae7281a96a5a16647.png
 logos/CTRC_Logo_tagline.png: logos/CTRC_Logo_tagline-09b0d3de83e80d44a3f9ca5c527a3d1f.png
 logos/circle.png: logos/circle-64a0ba955b5d9f29a4ff019032de52e8.png
@@ -85,6 +89,6 @@ logos/tmd-big.jpg: logos/tmd-big-35e01702e12e3af3d117296bc4917d15.jpg
 logos/tmd.jpg: logos/tmd-35d051a4076e8f95924f8316964715ef.jpg
 logos/transparent.gif: logos/transparent-cce06006ed2997165a894dc8b0b106d5.gif
 logos/videofiller.png: logos/videofiller-cdd51be55faa9252a5012360ffd91139.png
-application.js: application-7de72bd7144dfddd857b705381ec9a8e.js
-application.css: application-d227fdd467b64ad9b6ff8796de4dbeab.css
+application.js: application-bee7081fbe519fad98bc471cfbf68dce.js
+application.css: application-ffa564c9275528444cb5b3b65bba65f0.css
 jquery.min.map: jquery.min-70bec01470bf6bcfed5892ae554b38c8.map
