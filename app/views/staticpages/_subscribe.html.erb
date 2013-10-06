@@ -2,13 +2,13 @@
     <div class="row-fluid container splash-4g" style="padding-top:0px; padding-bottom:0px">
         </br>
         
-        <div class="span11" style="padding: 0 0 0 13%">
+        <div class="portion-container" style="text-align:center; margin-left:auto; margin-right:auto">
 
             <h1 class="header white" style="margin-top:0px; text-align:center">
                 Keep up to date with 21st century healthcare.
             </h1>
         </div>
-        <div class="span12" style="padding: 0 0 0 10%">
+        <div class="span10 offset2" >
             <%= form_for(@subscriber, :remote => true, url:{action:"create", controller:"subscribers"}) do |f| %>
              <%= f.text_field :email, placeholder:"name@example.com", :class => '', :style => 'height:40px; margin-left:10%; width:50%; border-radius:0px;' %>
              
