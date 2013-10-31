@@ -127,6 +127,11 @@
         font-size:16px;
         }
 
+        .tm-small{
+        vertical-align: 55%;
+        line-height: 18px;
+        font-size:16px;
+        }
         .popup_box { 
             display:none; /* Hide the DIV */
             position:fixed;  
