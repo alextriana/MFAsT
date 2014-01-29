@@ -1,11 +1,11 @@
 <div class="popup_box" id="popup_box">
      <div id="form-popup">
-      <div style="float:left; width:420px; margin-left:30px">
+      <div class = "pop-up-container">
           <div class="header-large white"><strong>Want to be a beta tester?</strong></h1>
          </div> 
          <br>
        </div>
-      <div style = "float:right; width:50px;">
+      <div  class='form-container'>
         <a class="btn btn-medium btn-danger icon-remove"  id="beta-no"></a>
       </div>
       <%= form_for(@betaUser, :remote => true, url:{action:"create", controller:"beta_users"}) do |f| %>
@@ -15,8 +15,8 @@
               <%= f.text_field :institution, placeholder:"Your Clinic Address", :class=>'subscribe'%>
              
           
-          <button type="submit" id='submit-beta' style="background-image:url('assets/buttons/blue_button.png'); height:67px; width:260px; border:none; background-color:#3e454c">
-              <p class="header-small white" style="font-size:20pt; font-weight:bold; text-align:center; padding-top:10px">Get the beta</p>
+          <button type="submit" id='submit-beta'>
+              <p class="header-small white button-beta" >Get the beta</p>
            
           <%end%>
         </div>
@@ -26,13 +26,13 @@
 
         <div id="popup-submission" style="display:none">
           
-          <div style="float:left; width:420px; margin-left:30px">
+          <div class="pop-submission-container">
             <div class="header-large white"><strong>Thanks for signing up! We'll be in contact soon.</strong></h1>
             </div> 
             <br>
             <br>
-         <div id='close-beta' style="background-image:url('assets/buttons/red_button.png'); height:67px; width:260px;">
-              <p class="header-small white" style="font-size:20pt; font-weight:bold; text-align:center; padding-top:10px">Return to site</p>
+         <div id='close-beta' >
+              <p class="header-small white thank-you" >Return to site</p>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@
 
 
 
-<div id="home" class=" color-1" style="padding-bottom:30px; min-width:1350px;">
+<div id="home" class=" color-1" class='panel'>
         <div class="row-fluid container" style="padding-top:30px; padding-bottom:0px; " >
             
             <div class="center-text">
@@ -93,17 +93,17 @@
         
             <div class='portion-container' style='padding: 20px 2% 20px; width:97%'>
               <div id="selling-points" style="padding:30px 0px 0px 5%;">
-                  <div style="pull-left">
+                  <div >
                        <div class="span5" >
-                          <ul class="big-list" style="min-width:350px">
+                          <ul class="big-list lst">
                             
-                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/sling.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>See more patients</li>
-                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/clock.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>More time for patients</li>
-                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/learn.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Easy to learn</li>
-                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/piggybank.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Affordable</li>
+                            <li ><%= image_tag('icons/sling.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>See more patients</li>
+                            <li ><%= image_tag('icons/clock.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>More time for patients</li>
+                            <li ><%= image_tag('icons/learn.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Easy to learn</li>
+                            <li ><%= image_tag('icons/piggybank.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Affordable</li>
                             
-                            <li style="margin: 15px 0 15px 0"><%= image_tag('icons/doctor.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Clinically validated</li>
-                            <li style="margin: 0px 0 15px 0;"><%= image_tag('icons/bolt.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>10x faster</li>
+                            <li ><%= image_tag('icons/doctor.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>Clinically validated</li>
+                            <li ><%= image_tag('icons/bolt.png', size: '60x60', :style => 'margin: 0 25px 0 0')%>10x faster</li>
                             </ul>
                             
                           

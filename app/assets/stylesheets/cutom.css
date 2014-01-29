@@ -1,189 +1,244 @@
-        .custom-container{
-            margin-right:120px; 
-            margin-left:8%
-        }
+    .custom-container{
+        margin-right:120px; 
+        margin-left:8%
+    }
+
+    html,body{right:0;}
 
 
-        .black {
-            color:black;
-        }
+    .black {
+        color:black;
+    }
 
-        .white {
-            color:white;
-        }
+    .white {
+        color:white;
+    }
 
-        .header-small{
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            font-size: 20pt;
-            line-height: 25pt;
-        }
+    .header-small{
+        font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+        font-size: 20pt;
+        line-height: 25pt;
+    }
 
-        .header-medium{
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            font-size: 25pt;
-            line-height: 30pt;
-        }
+    .header-medium{
+        font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+        font-size: 25pt;
+        line-height: 30pt;
+    }
 
-        .header-large {
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            font-size: 35pt;
-            line-height: 39pt;
+    .header-large {
+        font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+        font-size: 35pt;
+        line-height: 39pt;
 
-        }
+    }
+    
+
+    .standardText{
+        font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+        font-size: 14pt;
+        line-height: 18pt;
+        text-align:normal
+    }
+
+    .black {
+        color:black;
+    }
+
+    .rory-nav-text {
+        padding-top:15px; 
+        font-size:13pt;
+    }
+
+    .screen-span {
+        
+    }
+
+    .splash-1 {
+        background: #7ecefd;
         
 
-        .standardText{
-            font-family: 'Open Sans', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-            font-size: 14pt;
-            line-height: 18pt;
-            text-align:normal
-        }
+    }
 
-        .black {
-            color:black;
-        }
-
-        .rory-nav-text {
-            padding-top:15px; 
-            font-size:13pt;
-        }
-
-        .screen-span {
-            
-        }
-
-        .splash-1 {
-            background: #7ecefd;
-            
-
-        }
-
-        .splash-2 {
-            background: #fff6e5;
-            
-          
-        }
-
-        .splash-3 {
-            background: #2185c5;
-          
-        }
-
-        .splash-4 {
-            background: #ff7f66;
-            
-        }
-
-         .splash-5 {
-            background:#3e454c;
-
-           
-        }
-
-        .center-text {
-            text-align: center;
-        }
-
-        .portion-container{
-            width:85%;
-            padding: 20px 1% 20px 10px;
-            min-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1550px;
-            
-        }
-
-        .third {
-            width:30%;
-            display:inline-block;
-            padding: 0 1% 0 1%;
-        }
-
-        .two-third {
-            width:60%;
-            display:inline-block;
-            padding: 0 1% 0 1%;
-        }
-
-        .half {
-            width:42%;
-            display:inline-block;
-            padding: 0 1% 0 1%;
-        }
-
+    .splash-2 {
+        background: #fff6e5;
+        
       
+    }
 
-        .active .brand-2 {
-            background-color: #4baad3 !important;
-        }
-        .brand-2:hover {
-            background-color: #4baad3 !important;
-        }
+    .splash-3 {
+        background: #2185c5;
+      
+    }
 
-        .tm{
-        vertical-align: 55%;
-        line-height: 39px;
-        font-size:16px;
-        }
-
-        .tm-small{
-        vertical-align: 55%;
-        line-height: 18px;
-        font-size:16px;
-        }
-        .popup_box { 
-            display:none; /* Hide the DIV */
-            position:fixed;  
-            _position:absolute; /* hack for internet explorer 6 */  
-            height:430px;  
-            width:500px;  
-            background:#3e454c;  
-            left: 400px;
-            top: 150px;
-            z-index:50; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
-            margin-left: 15px;  
-            
-            /* additional features, can be omitted */
-            border:2px solid #cccccc;   
-            padding:5px;  
-            font-size:15px;  
-            -moz-box-shadow: 0 0 5px #cccccc;
-            -webkit-box-shadow: 0 0 5px #cccccc;
-            box-shadow: 0 0 5px #cccccc;
-          
-        }
-
-        .blue-button {
-            background-image:url('buttons/blue_button.png'); 
-        }
-
-        .orange-button{
-             background-image:url('buttons/red_button.png'); 
-        }
-
-        .button {
-            
-            height:67px; 
-            width:260px; 
-            margin-top:20px
-        }
-
-
-        .button-text {
-            font-size:20pt; 
-            font-weight:bold; 
-            text-align:center; 
-            padding-top:10px
-        }
+    .splash-4 {
+        background: #ff7f66;
         
-        .blue-button:hover {
-            background-image:url('buttons/red_button.png')
-        } 
-        .orange-button:hover {
-            background-image:url('buttons/blue_button.png')
-        }   
-        .pop-list-item:hover {
-            color:#4baad3;
-        }
- 
+    }
+
+     .splash-5 {
+        background:#3e454c;
+
+       
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .portion-container{
+        width:85%;
+        padding: 20px 1% 20px 10px;
+        min-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1550px;
+        
+    }
+
+    .third {
+        width:30%;
+        display:inline-block;
+        padding: 0 1% 0 1%;
+    }
+
+    .two-third {
+        width:60%;
+        display:inline-block;
+        padding: 0 1% 0 1%;
+    }
+
+    .half {
+        width:42%;
+        display:inline-block;
+        padding: 0 1% 0 1%;
+    }
+
+  
+
+    .active .brand-2 {
+        background-color: #4baad3 !important;
+    }
+    .brand-2:hover {
+        background-color: #4baad3 !important;
+    }
+
+    .tm{
+    vertical-align: 55%;
+    line-height:22px
+    font-size:16px;
+    }
+
+    .tm-small{
+    vertical-align: 55%;
+    line-height: 18px;
+    font-size:16px;
+    }
+    .popup_box { 
+        display:none; /* Hide the DIV */
+        position:fixed;  
+        _position:absolute; /* hack for internet explorer 6 */  
+        height:430px;  
+        width:500px;  
+        background:#3e454c;  
+        left: 400px;
+        top: 150px;
+        z-index:50; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+        margin-left: 15px;  
+        
+        /* additional features, can be omitted */
+        border:2px solid #cccccc;   
+        padding:5px;  
+        font-size:15px;  
+        -moz-box-shadow: 0 0 5px #cccccc;
+        -webkit-box-shadow: 0 0 5px #cccccc;
+        box-shadow: 0 0 5px #cccccc;
+      
+    }
+
+    .blue-button {
+        background-image:url('buttons/blue_button.png'); 
+    }
+
+    .orange-button{
+         background-image:url('buttons/red_button.png'); 
+    }
+
+    .button {
+        
+        height:67px; 
+        width:260px; 
+        margin-top:20px
+    }
+
+
+    .button-text {
+        font-size:20pt; 
+        font-weight:bold; 
+        text-align:center; 
+        padding-top:10px
+    }
+    
+    .blue-button:hover {
+        background-image:url('buttons/red_button.png')
+    } 
+    .orange-button:hover {
+        background-image:url('buttons/blue_button.png')
+    }   
+    .pop-list-item:hover {
+        color:#4baad3;
+    }
+
+    .pop-up-container {
+        float:left; width:420px; margin-left:30px
+    }
+
+    .form-container {float:right; width:50px;}
+
+    #submit-beta {background-image:url('assets/buttons/blue_button.png'); height:67px; width:260px; border:none; background-color:#3e454c}
+
+    .button-beta {
+        font-size:20pt; font-weight:bold; text-align:center; padding-top:10px
+    }
+
+    .pop-submission-container {float:left; width:420px; margin-left:30px}
+
+    #close-beta {
+        background-image:url('assets/buttons/red_button.png'); height:67px; width:260px;
+    }
+
+    .thank-you {font-size:20pt; font-weight:bold; text-align:center; padding-top:10px}
+
+    .panel {padding-bottom:30px; min-width:1350px;}
+
+    .panel-common {
+        padding:30px 0 30px 0; min-width:1350px 
+    }
+
+    .lst {min-width:350px}
+
+    .lst > li {
+        margin: 15px 0 15px 0
+    }
+    .center {text-align: center;margin-left:auto; margin-right:auto}
+
+    .no-pad-top {padding-top:0px}
+    .no-pad {padding-top:0px; padding-bottom:0px; }
+
+    .heading-center {text-align:center; margin-top:0px}
+
+    .h-320 {height:320px;}
+
+    .icon-placemat {display:block; margin-left:auto; margin-right:auto;text-align:center}
+
+    .icon-container-square {height:500px;vertical-align:top}
+    .nc-1 {text-align:center;margin-top:0px;margin-bottom:0px}
+    .nc-2 {font-size:20pt; font-weight:bold; text-align:center; padding-top:10px}
+
+
+    .prof-pic {
+        width: 180px; height: 180px; display: block; margin-left: auto;margin-right: auto
+    }
+    .prof-name{color:black; padding: 10px 0 0px 0}
+    .prof-d{color:black; padding: 0px 10px 0px 0px; margin:0px 0px 0px 0px}
+    .prof-t{color:black; font-weight:bold; padding: 0px 0px 0px 0px}
